@@ -532,8 +532,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diceToThrow: {fileID: 8625177440240620325, guid: 8ae06e3a06c21e84db59f825ef63fc1c, type: 3}
   amountOfDice: 2
-  throwForce: 1000
-  rollForce: 100000
+  throwForce: 500
+  rollForce: 200000
 --- !u!4 &36426493
 Transform:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ Transform:
   m_GameObject: {fileID: 36426491}
   serializedVersion: 2
   m_LocalRotation: {x: 0.07269477, y: 0.42925903, z: -0.034688197, w: 0.8995826}
-  m_LocalPosition: {x: -464, y: 108, z: -464}
+  m_LocalPosition: {x: -464, y: 225.6, z: -464}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
