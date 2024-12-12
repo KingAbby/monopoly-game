@@ -7,7 +7,11 @@ public class CharMove : MonoBehaviour
     public Route currentRoute;
 
     private int routePosition;
+<<<<<<< Updated upstream
     private int steps;
+=======
+    public int steps;
+>>>>>>> Stashed changes
     private bool isMoving;
 
     private void OnEnable()
@@ -30,13 +34,25 @@ public class CharMove : MonoBehaviour
         {
             steps += diceResult;   
         }
+<<<<<<< Updated upstream
         Debug.Log("Dice rolled: " + steps);
+=======
+        Debug.Log("Player rolled: " + steps);
+>>>>>>> Stashed changes
         if (!isMoving)
         {
             StartCoroutine(Move());
         }
     }
 
+<<<<<<< Updated upstream
+=======
+    public bool IsMoving()
+    {
+        return isMoving;
+    }
+
+>>>>>>> Stashed changes
     IEnumerator Move()
     {
         if (isMoving)
