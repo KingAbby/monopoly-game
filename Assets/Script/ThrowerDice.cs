@@ -17,7 +17,7 @@ public class ThrowerDice : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) RollDice();
     }
 
-    private async void RollDice()
+    public async void RollDice()
     {
         if (diceToThrow == null) return;
 
