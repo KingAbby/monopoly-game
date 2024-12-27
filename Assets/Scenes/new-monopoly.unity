@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1750
       objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 420
+      objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
       value: Property Node (19)
@@ -492,10 +496,21 @@ MonoBehaviour:
   nameText: {fileID: 0}
   price: 0
   priceText: {fileID: 0}
-  calculatedRentAuto: 0
+  calculateRentAuto: 0
   currentRent: 0
   baseRent: 0
-  rentWithHouses: 
+  rentWithHouses: []
+  mortgageImage: {fileID: 0}
+  propertyImage: {fileID: 0}
+  isMortgaged: 0
+  mortgageValue: 0
+  owner:
+    playerType: 0
+    name: 
+    myToken: {fileID: 0}
+    myMonopolyNodes: []
+  ownerBar: {fileID: 0}
+  ownerText: {fileID: 0}
 --- !u!1 &144041788
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,10 +562,21 @@ MonoBehaviour:
   nameText: {fileID: 0}
   price: 0
   priceText: {fileID: 0}
-  calculatedRentAuto: 0
+  calculateRentAuto: 0
   currentRent: 0
   baseRent: 0
-  rentWithHouses: 
+  rentWithHouses: []
+  mortgageImage: {fileID: 0}
+  propertyImage: {fileID: 0}
+  isMortgaged: 0
+  mortgageValue: 0
+  owner:
+    playerType: 0
+    name: 
+    myToken: {fileID: 0}
+    myMonopolyNodes: []
+  ownerBar: {fileID: 0}
+  ownerText: {fileID: 0}
 --- !u!1 &166503313
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,6 +962,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1875
       objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 450
+      objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
       value: Property Node (20)
@@ -1222,6 +1252,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1625
       objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 390
+      objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
       value: Property Node (18)
@@ -1304,6 +1338,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
       value: 1
       objectReference: {fileID: 0}
@@ -1330,6 +1368,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 120
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -1554,8 +1596,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576271578}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.5978372, y: 0.000120721816, z: 0.00021234564, w: -0.8016175}
+  m_LocalPosition: {x: -42, y: 79, z: 8.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1680,6 +1722,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1500
       objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 360
+      objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
       value: Property Node (16)
@@ -1754,6 +1800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 691818482}
+  - component: {fileID: 691818483}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1770,12 +1817,45 @@ Transform:
   m_GameObject: {fileID: 691818481}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.240562, y: -178.72923, z: 35.164864}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &691818483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691818481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35310ef8a7789954397d3e78ddbc277f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameBoard: {fileID: 819750322}
+  playerList:
+  - playerType: 1
+    name: AI_Toni
+    myToken: {fileID: 0}
+    myMonopolyNodes: []
+  - playerType: 1
+    name: AI_Bob
+    myToken: {fileID: 0}
+    myMonopolyNodes: []
+  currentPlayer: 0
+  maxTurnsInJail: 3
+  startMoney: 2000
+  goMoney: 200
+  playerInfoPrefab: {fileID: 7102743377231036093, guid: ac62c4d120b1d084db187fed05da1288, type: 3}
+  playerPanel: {fileID: 1151281584}
+  playerTokenList:
+  - {fileID: 6416080906334046197, guid: 1e96872356a10084f97169a62ea8bb2d, type: 3}
+  - {fileID: 6266560860219870468, guid: 7ba294f0856a48f4fb8903862daaa67a, type: 3}
+  - {fileID: 8521964564905596064, guid: 3a2bd62daf0d02c418f06468afe8e494, type: 3}
+  - {fileID: 6993851913612515469, guid: 0b4af0ff0354a264c96073028e1cc7f7, type: 3}
 --- !u!1001 &699295409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1917,6 +1997,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 750
       objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 180
+      objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
       value: Property Node (7)
@@ -2033,10 +2117,21 @@ MonoBehaviour:
   nameText: {fileID: 0}
   price: 0
   priceText: {fileID: 0}
-  calculatedRentAuto: 0
+  calculateRentAuto: 0
   currentRent: 0
   baseRent: 0
-  rentWithHouses: 
+  rentWithHouses: []
+  mortgageImage: {fileID: 0}
+  propertyImage: {fileID: 0}
+  isMortgaged: 0
+  mortgageValue: 0
+  owner:
+    playerType: 0
+    name: 
+    myToken: {fileID: 0}
+    myMonopolyNodes: []
+  ownerBar: {fileID: 0}
+  ownerText: {fileID: 0}
 --- !u!1001 &769666188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2052,6 +2147,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -2080,6 +2179,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 625
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 150
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -2189,6 +2292,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 90
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -2555,14 +2662,14 @@ MonoBehaviour:
   route:
   - {fileID: 115694861}
   - {fileID: 7221249164310508047}
-  - {fileID: 839031688}
-  - {fileID: 962025963}
-  - {fileID: 777673684}
-  - {fileID: 429308969}
   - {fileID: 1369992136549191091}
+  - {fileID: 839031688}
   - {fileID: 8671834380745222810}
   - {fileID: 6457280174039705620}
+  - {fileID: 962025963}
   - {fileID: 229842498964425450}
+  - {fileID: 777673684}
+  - {fileID: 429308969}
   - {fileID: 144041790}
   - {fileID: 769666189}
   - {fileID: 1154842732}
@@ -2608,14 +2715,14 @@ Transform:
   m_Children:
   - {fileID: 115694860}
   - {fileID: 7221249164310508048}
-  - {fileID: 839031689}
-  - {fileID: 962025964}
-  - {fileID: 777673685}
-  - {fileID: 429308970}
   - {fileID: 1369992136549191092}
+  - {fileID: 839031689}
   - {fileID: 8671834380745222811}
   - {fileID: 6457280174039705621}
+  - {fileID: 962025964}
   - {fileID: 229842498964425451}
+  - {fileID: 777673685}
+  - {fileID: 429308970}
   - {fileID: 144041789}
   - {fileID: 769666190}
   - {fileID: 1154842733}
@@ -2691,6 +2798,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 1375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 330
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -2800,6 +2911,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 60
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -3000,6 +3115,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945184704}
   m_CullTransparentMesh: 1
+--- !u!1 &955655252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 955655253}
+  - component: {fileID: 955655255}
+  - component: {fileID: 955655254}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &955655253
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955655252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1926741637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &955655254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955655252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Player List
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 37.35
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &955655255
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955655252}
+  m_CullTransparentMesh: 1
 --- !u!1001 &956046241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3043,6 +3292,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 300
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -3152,6 +3405,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 90
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -3618,6 +3875,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1125
       objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 270
+      objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
       value: Property Node (11)
@@ -3934,6 +4195,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 875
       objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 210
+      objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
       value: Property Node (9)
@@ -3999,6 +4264,124 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9107675067177647096, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
   m_PrefabInstance: {fileID: 1146887881}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1151281583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1151281584}
+  - component: {fileID: 1151281588}
+  - component: {fileID: 1151281587}
+  - component: {fileID: 1151281586}
+  - component: {fileID: 1151281585}
+  m_Layer: 5
+  m_Name: PlayerPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1151281584
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151281583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1926741637}
+  m_Father: {fileID: 1680799897}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -150, y: 0}
+  m_SizeDelta: {x: 300, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1151281585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151281583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
+--- !u!114 &1151281586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151281583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 5
+    m_Right: 5
+    m_Top: 5
+    m_Bottom: 5
+  m_ChildAlignment: 0
+  m_Spacing: 5
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &1151281587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151281583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1151281588
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151281583}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1154842731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4301,10 +4684,21 @@ MonoBehaviour:
   nameText: {fileID: 0}
   price: 0
   priceText: {fileID: 0}
-  calculatedRentAuto: 0
+  calculateRentAuto: 0
   currentRent: 0
   baseRent: 0
-  rentWithHouses: 
+  rentWithHouses: []
+  mortgageImage: {fileID: 0}
+  propertyImage: {fileID: 0}
+  isMortgaged: 0
+  mortgageValue: 0
+  owner:
+    playerType: 0
+    name: 
+    myToken: {fileID: 0}
+    myMonopolyNodes: []
+  ownerBar: {fileID: 0}
+  ownerText: {fileID: 0}
 --- !u!1 &1371403661
 GameObject:
   m_ObjectHideFlags: 0
@@ -4570,6 +4964,10 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 195
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
       value: 0
       objectReference: {fileID: 0}
@@ -4596,6 +4994,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 1625
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 390
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -4934,6 +5336,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 625
       objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 150
+      objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
       value: Property Node (6)
@@ -5103,6 +5509,108 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1680799893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680799897}
+  - component: {fileID: 1680799896}
+  - component: {fileID: 1680799895}
+  - component: {fileID: 1680799894}
+  m_Layer: 5
+  m_Name: UI Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1680799894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680799893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1680799895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680799893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1680799896
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680799893}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1680799897
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680799893}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1151281584}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1001 &1689316390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5146,6 +5654,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 240
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -5457,6 +5969,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 875
       objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 210
+      objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
       value: Property Node (8)
@@ -5731,6 +6247,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1375
       objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 330
+      objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
       value: Property Node (15)
@@ -5840,6 +6360,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 2000
       objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 480
+      objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
       value: Property Node (21)
@@ -5905,6 +6429,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9107675067177647096, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
   m_PrefabInstance: {fileID: 1899720781}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1926741636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926741637}
+  - component: {fileID: 1926741639}
+  - component: {fileID: 1926741638}
+  m_Layer: 5
+  m_Name: Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1926741637
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926741636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 955655253}
+  m_Father: {fileID: 1151281584}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1926741638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926741636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1926741639
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926741636}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1998252747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5948,6 +6548,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 1125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 270
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -6344,6 +6948,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
+    - target: {fileID: 26718165710576052, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 60
@@ -6351,6 +6959,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: owner.name
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -6379,6 +6991,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: G 60
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -6529,3 +7145,4 @@ SceneRoots:
   - {fileID: 1852857485}
   - {fileID: 1408094039}
   - {fileID: 691818482}
+  - {fileID: 1680799897}

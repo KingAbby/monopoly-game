@@ -58,16 +58,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.22745098}
+  m_Color: {r: 0, g: 0.46789885, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1473419042, guid: 8673caad77094474daebf1f7133b329e, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -258,6 +258,23 @@ MonoBehaviour:
   monopolyNodeType: 4
   name: Potions
   nameText: {fileID: 3470268011195702789}
+  price: 0
+  priceText: {fileID: 0}
+  calculateRentAuto: 0
+  currentRent: 0
+  baseRent: 0
+  rentWithHouses: []
+  mortgageImage: {fileID: 0}
+  propertyImage: {fileID: 0}
+  isMortgaged: 0
+  mortgageValue: 0
+  owner:
+    playerType: 0
+    name: 
+    myToken: {fileID: 0}
+    myMonopolyNodes: []
+  ownerBar: {fileID: 0}
+  ownerText: {fileID: 0}
 --- !u!1 &7880766643411425499
 GameObject:
   m_ObjectHideFlags: 0
