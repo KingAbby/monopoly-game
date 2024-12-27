@@ -30,7 +30,7 @@ public class MonopolyNode : MonoBehaviour
     [SerializeField] TMP_Text priceText;
 
     [Header("Property Rent")]
-    [SerializeField] bool calculatedRentAuto;
+    [SerializeField] bool calculateRentAuto;
     [SerializeField] int currentRent;
     [SerializeField] internal int baseRent;
     [SerializeField] internal int[] rentWithHouses;
@@ -42,6 +42,7 @@ public class MonopolyNode : MonoBehaviour
     [SerializeField] int mortgageValue;
 
     [Header("Property Owner")]
+    public Player owner;
     [SerializeField] GameObject ownerBar;
     [SerializeField] TMP_Text ownerText;
 
@@ -51,15 +52,16 @@ public class MonopolyNode : MonoBehaviour
         {
             nameText.text = name;
         }
+
         // CALCULATE RENT
-        if (calculatedRentAuto)
+        if (calculateRentAuto)
         {
             if (monopolyNodeType == MonopolyNodeType.Property)
             {
                 if (baseRent > 0)
                 {
                     price = 3 * (baseRent * 10);
-                    // MORGAGE VALUE
+                    // MORTGAGE VALUE
                     mortgageValue = price / 2;
                     rentWithHouses = new int[]{
                         baseRent * 5,
@@ -79,48 +81,92 @@ public class MonopolyNode : MonoBehaviour
                 mortgageValue = price / 2;
             }
         }
+
         // PROPERTY PRICE
         if (priceText != null)
         {
             priceText.text = "G " + price;
         }
+
+        // UPDATE THE OWNER
+        OnOwnerUpdated();
+        UnMortgageProperty();
+        // isMortgaged = false;
     }
 
     // PROPERTY, UTILITY, RAILROAD MORTGAGE
     public int MortgageProperty()
     {
         isMortgaged = true;
-        mortgageImage.SetActive(true);
-        propertyImage.SetActive(false);
+        if (mortgageImage != null)
+        {
+            mortgageImage.SetActive(true);
+        }
+
+        if (propertyImage != null)
+        {
+            propertyImage.SetActive(false);
+        }
         return mortgageValue;
     }
 
     public void UnMortgageProperty()
     {
         isMortgaged = false;
-        mortgageImage.SetActive(false);
-        propertyImage.SetActive(true);
+        if (mortgageImage != null)
+        {
+            mortgageImage.SetActive(false);
+        }
+
+        if (propertyImage != null)
+        {
+            propertyImage.SetActive(true);
+        }
     }
 
     public bool IsMortgaged => isMortgaged;
     public int MortgageValue => mortgageValue;
 
-    // UPDATE THE OWNER
+    // UPDATE OWNER
     public void OnOwnerUpdated()
     {
         if (ownerBar != null)
         {
-            if (ownerText.text != "")
+            if (owner.name != "")
             {
                 ownerBar.SetActive(true);
-                // ownerText.text = owner.name;
+                ownerText.text = owner.name;
             }
             else
             {
                 ownerBar.SetActive(false);
-                // ownerText.text = "";
+                ownerText.text = "";
             }
         }
+    }
+
+    public void PlayerLandedOnNode(Player currentPlayer)
+    {
+        bool playerIsHuman = currentPlayer.playerType == Player.PlayerType.HUMAN;
+        if (!playerIsHuman)
+        {
+            Invoke("ContinueGame", 2f);
+        }
+        else
+        {
+            // SHOW UI FOR HUMAN PLAYER
+        }
+    }
+
+    void ContinueGame()
+    {
+        // IF THE LAST ROLL WAS A DOUBLE
+
+        // ROLL THE DICE AGAIN
+
+        // NOT A DOUBLE ROLL - SWITCH PLAYER
+        GameManager.instance.SwitchPlayer();
+
     }
 }
 
