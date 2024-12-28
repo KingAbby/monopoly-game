@@ -492,6 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monopolyNodeType: 6
+  propertyColorField: {fileID: 0}
   name: 
   nameText: {fileID: 0}
   price: 0
@@ -499,7 +500,7 @@ MonoBehaviour:
   calculateRentAuto: 0
   currentRent: 0
   baseRent: 0
-  rentWithHouses: []
+  rentWithHouses: 
   mortgageImage: {fileID: 0}
   propertyImage: {fileID: 0}
   isMortgaged: 0
@@ -558,6 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monopolyNodeType: 7
+  propertyColorField: {fileID: 0}
   name: 
   nameText: {fileID: 0}
   price: 0
@@ -565,7 +567,7 @@ MonoBehaviour:
   calculateRentAuto: 0
   currentRent: 0
   baseRent: 0
-  rentWithHouses: []
+  rentWithHouses: 
   mortgageImage: {fileID: 0}
   propertyImage: {fileID: 0}
   isMortgaged: 0
@@ -2113,6 +2115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monopolyNodeType: 9
+  propertyColorField: {fileID: 0}
   name: 
   nameText: {fileID: 0}
   price: 0
@@ -2120,7 +2123,7 @@ MonoBehaviour:
   calculateRentAuto: 0
   currentRent: 0
   baseRent: 0
-  rentWithHouses: []
+  rentWithHouses: 
   mortgageImage: {fileID: 0}
   propertyImage: {fileID: 0}
   isMortgaged: 0
@@ -2700,6 +2703,45 @@ MonoBehaviour:
   - {fileID: 325439532}
   - {fileID: 967801375}
   - {fileID: 1899720782}
+  nodeSetList:
+  - setColor: {r: 0.16862746, g: 0.7529412, b: 0.4392157, a: 1}
+    nodesInSetList:
+    - {fileID: 7221249164310508047}
+    - {fileID: 839031688}
+  - setColor: {r: 0.13616267, g: 0.38364768, b: 0.059115443, a: 1}
+    nodesInSetList:
+    - {fileID: 962025963}
+    - {fileID: 777673684}
+    - {fileID: 429308969}
+  - setColor: {r: 0.05490196, g: 0.1764706, b: 0.47058824, a: 1}
+    nodesInSetList:
+    - {fileID: 769666189}
+    - {fileID: 1579329182}
+    - {fileID: 726809970}
+  - setColor: {r: 0, g: 0.94509804, b: 0.9529412, a: 1}
+    nodesInSetList:
+    - {fileID: 1827590259}
+    - {fileID: 1146887882}
+    - {fileID: 1689316391}
+  - setColor: {r: 0.9433962, g: 0.18096577, b: 0.4186647, a: 1}
+    nodesInSetList:
+    - {fileID: 1019861262}
+    - {fileID: 1998252748}
+    - {fileID: 956046242}
+  - setColor: {r: 0.50980395, g: 0.23921569, b: 0.96862745, a: 1}
+    nodesInSetList:
+    - {fileID: 837673202}
+    - {fileID: 1876172731}
+    - {fileID: 684748513}
+  - setColor: {r: 0.96862745, g: 0.48235294, b: 0.101960786, a: 1}
+    nodesInSetList:
+    - {fileID: 1555984349}
+    - {fileID: 400762358}
+    - {fileID: 78825397}
+  - setColor: {r: 0.96862745, g: 0.13312344, b: 0.1019608, a: 1}
+    nodesInSetList:
+    - {fileID: 325439532}
+    - {fileID: 1899720782}
 --- !u!4 &819750323
 Transform:
   m_ObjectHideFlags: 0
@@ -4680,6 +4722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monopolyNodeType: 8
+  propertyColorField: {fileID: 0}
   name: 
   nameText: {fileID: 0}
   price: 0
@@ -4687,7 +4730,7 @@ MonoBehaviour:
   calculateRentAuto: 0
   currentRent: 0
   baseRent: 0
-  rentWithHouses: []
+  rentWithHouses: 
   mortgageImage: {fileID: 0}
   propertyImage: {fileID: 0}
   isMortgaged: 0
