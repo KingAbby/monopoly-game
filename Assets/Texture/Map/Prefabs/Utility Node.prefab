@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: G 400
+  m_text: G 500
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -259,8 +259,8 @@ MonoBehaviour:
   propertyColorField: {fileID: 0}
   name: Utility
   nameText: {fileID: 2573581415472301524}
-  price: 0
-  priceText: {fileID: 0}
+  price: 500
+  priceText: {fileID: 1931182294754645756}
   calculateRentAuto: 0
   currentRent: 0
   baseRent: 0

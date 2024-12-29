@@ -156,16 +156,16 @@ MonoBehaviour:
   propertyColorField: {fileID: 0}
   name: Railroad
   nameText: {fileID: 7319040855513579865}
-  price: 0
-  priceText: {fileID: 0}
-  calculateRentAuto: 0
+  price: 450
+  priceText: {fileID: 7887497294127219713}
+  calculateRentAuto: 1
   currentRent: 0
-  baseRent: 0
+  baseRent: 100
   rentWithHouses: 
   mortgageImage: {fileID: 1786228856208981267}
   propertyImage: {fileID: 6549255744617859599}
   isMortgaged: 0
-  mortgageValue: 0
+  mortgageValue: 225
   ownerBar: {fileID: 4846039346205412468}
   ownerText: {fileID: 3443308267858672227}
   owner:
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: G 400
+  m_text: G 450
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

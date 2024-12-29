@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     int[] rolledDice;
     bool rolledADouble;
     int doubleRollCount;
+    //TAX POOL
+    int taxPool = 0;
 
     // PASS OVER GO TO GET THE MONEY
     public int GetGoMoney => goMoney;
@@ -118,5 +120,21 @@ public class GameManager : MonoBehaviour
         }
 
         // IF HUMAN - SHOW UI
+    }
+
+    public int[] LastRolledDice => rolledDice;
+
+    public void AddTaxToPool(int amount)
+    {
+        taxPool += amount;
+    }
+
+    public int GetTaxPool()
+    {
+        //temp store tax pool
+        int currentTaxCollected = taxPool;
+        taxPool = 0; //reset tax pool
+        //send temp
+        return currentTaxCollected;
     }
 }
