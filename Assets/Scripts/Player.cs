@@ -96,4 +96,16 @@ public class Player
         //UPDATE UI
         myInfo.SetPlayerCash(money);
     }
+
+    internal void PayMoney(int amount)
+    {
+        //NOT ENOUGH MONEY
+        if (money < amount)
+        {
+            //HANDLE INSUFFICIENT FUNDS
+        }
+        money -= amount;
+        //UPDATE UI
+        myInfo.SetPlayerCash(money);
+    }
 }

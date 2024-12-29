@@ -245,7 +245,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: G 50
+  m_text: G 200
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -495,25 +495,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monopolyNodeType: 3
+  propertyColorField: {fileID: 0}
   name: Tax
   nameText: {fileID: 2694402896545609904}
-  price: 0
-  priceText: {fileID: 0}
+  price: 200
+  priceText: {fileID: 548716989647362442}
   calculateRentAuto: 0
   currentRent: 0
   baseRent: 0
-  rentWithHouses: []
+  rentWithHouses: 
   mortgageImage: {fileID: 0}
   propertyImage: {fileID: 0}
   isMortgaged: 0
   mortgageValue: 0
+  ownerBar: {fileID: 0}
+  ownerText: {fileID: 0}
   owner:
     playerType: 0
     name: 
     myToken: {fileID: 0}
     myMonopolyNodes: []
-  ownerBar: {fileID: 0}
-  ownerText: {fileID: 0}
 --- !u!1 &7774269379052908860
 GameObject:
   m_ObjectHideFlags: 0
