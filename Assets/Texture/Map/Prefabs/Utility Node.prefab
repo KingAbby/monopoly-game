@@ -256,6 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monopolyNodeType: 1
+  propertyColorField: {fileID: 0}
   name: Utility
   nameText: {fileID: 2573581415472301524}
   price: 0
@@ -263,18 +264,18 @@ MonoBehaviour:
   calculateRentAuto: 0
   currentRent: 0
   baseRent: 0
-  rentWithHouses: []
+  rentWithHouses: 
   mortgageImage: {fileID: 375065424577472630}
   propertyImage: {fileID: 8151934408732659070}
   isMortgaged: 0
   mortgageValue: 0
+  ownerBar: {fileID: 8490988292148319051}
+  ownerText: {fileID: 9218785167705844128}
   owner:
     playerType: 0
     name: 
     myToken: {fileID: 0}
     myMonopolyNodes: []
-  ownerBar: {fileID: 8490988292148319051}
-  ownerText: {fileID: 9218785167705844128}
 --- !u!1 &804259508981854507
 GameObject:
   m_ObjectHideFlags: 0

@@ -238,11 +238,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 420
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 14
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -254,27 +258,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 70
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 210
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 630
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 1120
+      value: 1600
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1750
+      value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.48235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.96862745
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -505,13 +521,13 @@ MonoBehaviour:
   propertyImage: {fileID: 0}
   isMortgaged: 0
   mortgageValue: 0
+  ownerBar: {fileID: 0}
+  ownerText: {fileID: 0}
   owner:
     playerType: 0
     name: 
     myToken: {fileID: 0}
     myMonopolyNodes: []
-  ownerBar: {fileID: 0}
-  ownerText: {fileID: 0}
 --- !u!1 &144041788
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,13 +588,13 @@ MonoBehaviour:
   propertyImage: {fileID: 0}
   isMortgaged: 0
   mortgageValue: 0
+  ownerBar: {fileID: 0}
+  ownerText: {fileID: 0}
   owner:
     playerType: 0
     name: 
     myToken: {fileID: 0}
     myMonopolyNodes: []
-  ownerBar: {fileID: 0}
-  ownerText: {fileID: 0}
 --- !u!1 &166503313
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,11 +946,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 450
+      value: 630
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 15
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 315
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -946,27 +966,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 75
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 225
+      value: 315
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 675
+      value: 945
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 1200
+      value: 1680
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1875
+      value: 2625
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.13312344
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.96862745
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -1220,11 +1252,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 390
+      value: 570
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 13
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 285
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -1236,27 +1272,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 65
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 195
+      value: 285
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 585
+      value: 855
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 1040
+      value: 1520
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1625
+      value: 2375
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 390
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.48235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.96862745
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -1333,15 +1381,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 120
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 60
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -1353,27 +1401,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 60
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 180
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 320
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 500
+      value: 625
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.059115443
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.38364768
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.13616267
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -1690,11 +1750,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 360
+      value: 510
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 12
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 255
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -1706,27 +1770,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 60
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 180
+      value: 255
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 540
+      value: 765
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 960
+      value: 1360
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1500
+      value: 2125
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.96862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.50980395
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -1965,11 +2041,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 180
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 6
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -1981,27 +2061,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 90
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 270
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 480
+      value: 640
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 750
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.47058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.05490196
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -2128,13 +2220,13 @@ MonoBehaviour:
   propertyImage: {fileID: 0}
   isMortgaged: 0
   mortgageValue: 0
+  ownerBar: {fileID: 0}
+  ownerText: {fileID: 0}
   owner:
     playerType: 0
     name: 
     myToken: {fileID: 0}
     myMonopolyNodes: []
-  ownerBar: {fileID: 0}
-  ownerText: {fileID: 0}
 --- !u!1001 &769666188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2145,15 +2237,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 150
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 75
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -2165,27 +2257,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 75
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 225
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 400
+      value: 480
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 625
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.47058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.05490196
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -2262,11 +2366,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 90
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -2278,27 +2386,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 45
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 135
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 240
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 375
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.059115443
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.38364768
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.13616267
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -2807,11 +2927,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 330
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 11
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -2823,27 +2947,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 55
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 165
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 495
+      value: 675
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 880
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1375
+      value: 1875
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.96862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.50980395
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -2927,6 +3063,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
       value: 0
       objectReference: {fileID: 0}
@@ -2957,6 +3097,18 @@ PrefabInstance:
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.16862746
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -3301,11 +3453,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 300
+      value: 420
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 10
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -3317,27 +3473,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 50
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 150
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 450
+      value: 630
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 800
+      value: 1120
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1250
+      value: 1750
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4186647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.18096577
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9433962
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -3421,6 +3589,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
       value: 0
       objectReference: {fileID: 0}
@@ -3451,6 +3623,18 @@ PrefabInstance:
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.059115443
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.38364768
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.13616267
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -3883,11 +4067,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 270
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 9
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -3899,27 +4087,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 45
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 135
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 405
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 720
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1125
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4186647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.18096577
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9433962
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -4203,11 +4403,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 210
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 7
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -4219,27 +4423,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 35
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 105
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 315
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 560
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 875
+      value: 1250
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 210
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -4735,13 +4951,13 @@ MonoBehaviour:
   propertyImage: {fileID: 0}
   isMortgaged: 0
   mortgageValue: 0
+  ownerBar: {fileID: 0}
+  ownerText: {fileID: 0}
   owner:
     playerType: 0
     name: 
     myToken: {fileID: 0}
     myMonopolyNodes: []
-  ownerBar: {fileID: 0}
-  ownerText: {fileID: 0}
 --- !u!1 &1371403661
 GameObject:
   m_ObjectHideFlags: 0
@@ -5000,15 +5216,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 390
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 13
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 195
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -5020,27 +5236,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 65
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 195
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 585
+      value: 810
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 1040
+      value: 1440
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1625
+      value: 2250
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 390
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.48235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.96862745
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -5345,11 +5573,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 150
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 5
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -5361,27 +5593,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 75
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 225
+      value: 315
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 400
+      value: 560
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 625
+      value: 875
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.47058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.05490196
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -5664,11 +5908,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 240
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 8
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -5680,27 +5928,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 40
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 120
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 360
+      value: 495
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 640
+      value: 880
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1000
+      value: 1375
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -5978,11 +6238,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 210
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 7
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -5994,27 +6258,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 35
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 105
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 315
+      value: 405
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 560
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 875
+      value: 1125
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 210
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -6256,11 +6532,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 330
+      value: 480
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 11
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -6272,27 +6552,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 55
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 165
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 495
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 880
+      value: 1280
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1375
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.96862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.50980395
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -6369,11 +6661,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 480
+      value: 660
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 16
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -6385,27 +6681,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 80
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 240
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 720
+      value: 990
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 1280
+      value: 1760
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 2000
+      value: 2750
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 480
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.13312344
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.96862745
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -6558,11 +6866,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 270
+      value: 390
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 9
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 195
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -6574,27 +6886,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 45
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 135
+      value: 195
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 405
+      value: 585
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 720
+      value: 1040
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1125
+      value: 1625
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4186647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.18096577
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9433962
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -6997,15 +7321,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: owner.name
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: mortgageValue
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: calculateRentAuto
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -7017,27 +7349,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 90
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 160
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 250
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.16862746
       objectReference: {fileID: 0}
     - target: {fileID: 7769096997921963107, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Name
@@ -7112,6 +7456,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
+    - target: {fileID: -8774291971815491167, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
+      propertyPath: calculateRentAuto
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3153897204326105423, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.75

@@ -15,7 +15,7 @@ public class MonopolyBoard : MonoBehaviour
         public List<MonopolyNode> nodesInSetList = new List<MonopolyNode>();
     }
 
-    [SerializeField] List<NodeSet> nodeSetList = new List<NodeSet>();
+    public List<NodeSet> nodeSetList = new List<NodeSet>();
 
     void Awake()
     {
@@ -27,15 +27,6 @@ public class MonopolyBoard : MonoBehaviour
         foreach (Transform node in transform.GetComponentInChildren<Transform>())
         {
             route.Add(node.GetComponent<MonopolyNode>());
-        }
-
-        //UPDATE NODE COLORS
-        for (int i = 0; i < nodeSetList.Count; i++)
-        {
-            for (int j = 0; j < nodeSetList[i].nodesInSetList.Count; j++)
-            {
-                nodeSetList[i].nodesInSetList[j].UpdateColorField(nodeSetList[i].setColor);
-            }
         }
     }
 

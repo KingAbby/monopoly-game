@@ -22,7 +22,7 @@ public enum MonopolyNodeType
 public class MonopolyNode : MonoBehaviour
 {
     public MonopolyNodeType monopolyNodeType;
-    [SerializeField] Image propertyColorField;
+    public Image propertyColorField;
     [Header("Name")]
     [SerializeField] internal new string name;
     [SerializeField] TMP_Text nameText;
@@ -35,7 +35,7 @@ public class MonopolyNode : MonoBehaviour
     [SerializeField] bool calculateRentAuto;
     [SerializeField] int currentRent;
     [SerializeField] internal int baseRent;
-    [SerializeField] internal int[] rentWithHouses;
+    [SerializeField] internal List<int> rentWithHouses = new List<int>();
     int numberOfHouses;
     [Header("Property Mortgage")]
     [SerializeField] GameObject mortgageImage;
@@ -49,6 +49,10 @@ public class MonopolyNode : MonoBehaviour
     public Player owner;
 
     public Player Owner => owner;
+    public void setOwner(Player newOwner)
+    {
+        owner = newOwner;
+    }
 
     void OnValidate()
     {
@@ -67,13 +71,19 @@ public class MonopolyNode : MonoBehaviour
                     price = 3 * (baseRent * 10);
                     // MORTGAGE VALUE
                     mortgageValue = price / 2;
-                    rentWithHouses = new int[]{
-                        baseRent * 5,
-                        baseRent * 5 * 3,
-                        baseRent * 5 * 9,
-                        baseRent * 5 * 16,
-                        baseRent * 5 * 25,
-                    };
+                    rentWithHouses.Clear();
+                    rentWithHouses.Add(baseRent * 5);
+                    rentWithHouses.Add(baseRent * 5 * 3);
+                    rentWithHouses.Add(baseRent * 5 * 9);
+                    rentWithHouses.Add(baseRent * 5 * 16);
+                    rentWithHouses.Add(baseRent * 5 * 25);
+                }
+                else if (baseRent <= 0)
+                {
+                    price = 0;
+                    baseRent = 0;
+                    rentWithHouses.Clear();
+                    mortgageValue = 0;
                 }
             }
             if (monopolyNodeType == MonopolyNodeType.Utility)
@@ -167,20 +177,25 @@ public class MonopolyNode : MonoBehaviour
                 if (!playerIsHuman)//AI player
                 {
                     //IF IT OWNED AND WERE NOT THE OWNER AND IS NOT MORTGAGED
-                    if (owner.name != "" && owner != currentPlayer && isMortgaged)
+                    if (owner.name != "" && owner != currentPlayer && !isMortgaged)
                     {
                         //PAY RENT
 
                         //CALCULATE RENT
+                        Debug.Log("Player Should Pay Rent To: " + owner.name);
                         int rentToPay = CalculatePropertyRent();
-
                         //PAY RENT TO OWNER
+                        currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
+                        Debug.Log(currentPlayer.name + " pays rent of " + rentToPay + " to " + owner.name);
                     }
-                    else if (owner.name == "" /*&& IF CAN AFFORD */)
+                    else if (owner.name == "" && currentPlayer.CanAffordNode(price))
                     {
                         //BUY NODE
+                        Debug.Log("Player Might Buy Property");
+                        currentPlayer.BuyProperty(this);
+                        OnOwnerUpdated();
 
                         //SHOW MESSAGE
                     }

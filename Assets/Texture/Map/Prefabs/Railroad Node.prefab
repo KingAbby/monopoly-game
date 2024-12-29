@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monopolyNodeType: 2
+  propertyColorField: {fileID: 0}
   name: Railroad
   nameText: {fileID: 7319040855513579865}
   price: 0
@@ -160,18 +161,18 @@ MonoBehaviour:
   calculateRentAuto: 0
   currentRent: 0
   baseRent: 0
-  rentWithHouses: []
+  rentWithHouses: 
   mortgageImage: {fileID: 1786228856208981267}
   propertyImage: {fileID: 6549255744617859599}
   isMortgaged: 0
   mortgageValue: 0
+  ownerBar: {fileID: 4846039346205412468}
+  ownerText: {fileID: 3443308267858672227}
   owner:
     playerType: 0
     name: 
     myToken: {fileID: 0}
     myMonopolyNodes: []
-  ownerBar: {fileID: 4846039346205412468}
-  ownerText: {fileID: 3443308267858672227}
 --- !u!1 &1786228856208981267
 GameObject:
   m_ObjectHideFlags: 0
