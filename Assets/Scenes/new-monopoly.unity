@@ -1934,6 +1934,7 @@ MonoBehaviour:
   - {fileID: 6266560860219870468, guid: 7ba294f0856a48f4fb8903862daaa67a, type: 3}
   - {fileID: 8521964564905596064, guid: 3a2bd62daf0d02c418f06468afe8e494, type: 3}
   - {fileID: 6993851913612515469, guid: 0b4af0ff0354a264c96073028e1cc7f7, type: 3}
+  alwaysDoubleRoll: 1
 --- !u!1001 &699295409
 PrefabInstance:
   m_ObjectHideFlags: 0
