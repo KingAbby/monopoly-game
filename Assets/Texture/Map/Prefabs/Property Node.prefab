@@ -755,7 +755,7 @@ MonoBehaviour:
   nameText: {fileID: 1913571717874873973}
   price: 0
   priceText: {fileID: 5839948490506872843}
-  calculateRentAuto: 0
+  calculateRentAuto: 1
   currentRent: 0
   baseRent: 0
   rentWithHouses: 
@@ -765,6 +765,11 @@ MonoBehaviour:
   mortgageValue: 0
   ownerBar: {fileID: 26718165710576052}
   ownerText: {fileID: 8863559382706014224}
+  owner:
+    playerType: 0
+    name: 
+    myToken: {fileID: 0}
+    myMonopolyNodes: []
 --- !u!1 &8393580504275911735
 GameObject:
   m_ObjectHideFlags: 0
