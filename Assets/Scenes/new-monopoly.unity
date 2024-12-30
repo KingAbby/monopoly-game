@@ -147,13 +147,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45547953}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.000000029802319, z: 0.3733139, w: 0.92770505}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 342310756}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 43.84}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.50000036}
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 95c8618553d300e4da5cf111e2653837, type: 2}
   m_Color: {r: 0, g: 0, b: 0, a: 0.22745098}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 778db1517e8aa7949b5f978e2e6b07f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -237,6 +237,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: HOGSMEADE
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 600
       objectReference: {fileID: 0}
@@ -278,8 +282,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 420
+      value: G 600
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: faf3914dd594f5b488981ac072044128, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.101960786
@@ -786,7 +794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Parking
+  m_text: FLYING
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -871,9 +879,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
+    - target: {fileID: -7169453969590491702, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: name
+      value: RAVENCLAW
+      objectReference: {fileID: 0}
     - target: {fileID: 1754430202415528729, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
       propertyPath: m_Name
       value: Railroad Node (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773709449960701250, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aacac7e1078a5af4382e3674bd7e935c, type: 3}
+    - target: {fileID: 7319040855513579865, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_text
+      value: RAVENCLAW
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319040855513579865, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_fontSize
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319040855513579865, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8746792854304123213, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
       propertyPath: m_LocalPosition.x
@@ -945,6 +973,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: MINISTRY OF  MAGIC
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 630
       objectReference: {fileID: 0}
@@ -986,8 +1018,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 450
+      value: G 630
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9563927786070b2479521678ca1c86b6, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.1019608
@@ -1073,10 +1109,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
+    - target: {fileID: -7169453969590491702, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: name
+      value: SLYTHERIN
+      objectReference: {fileID: 0}
     - target: {fileID: 1754430202415528729, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
       propertyPath: m_Name
       value: Railroad Node (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6773709449960701250, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 18bbdbd6b948e474cb549abe8ad3a0cc, type: 3}
     - target: {fileID: 8746792854304123213, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.75
@@ -1251,6 +1295,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: DIAGON ALLEY
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 570
       objectReference: {fileID: 0}
@@ -1292,8 +1340,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 390
+      value: G 570
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c96a120970fd7a44fb14718b4ac74353, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.101960786
@@ -1380,6 +1432,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: OlLIVANDERS
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 150
       objectReference: {fileID: 0}
@@ -1421,8 +1477,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 120
+      value: G 150
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a428d80f85362bb4ead58a0c5b681b71, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.059115443
@@ -1548,6 +1608,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6263514564543670487, guid: a794d39c8f0834e41922f64bdd6a01ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f2c328ca9d9849440afb62198f601e45, type: 3}
     - target: {fileID: 8962206114131069209, guid: a794d39c8f0834e41922f64bdd6a01ba, type: 3}
       propertyPath: m_Name
       value: Community Node (1)
@@ -1690,13 +1754,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624135063}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.00000010430811, y: 0.00000016391273, z: 0.7010048, w: 0.7131565}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 96271989}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89.015}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.25000024}
@@ -1714,8 +1778,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.22745098}
+  m_Material: {fileID: 2100000, guid: 66228e2c40fd131468737c17eaccb435, type: 2}
+  m_Color: {r: 0.21568629, g: 0.21568629, b: 0.21568629, a: 0.22745098}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1748,6 +1812,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: DUMBLEDORE.S  OFFICE
+      objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 510
@@ -1790,8 +1858,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 360
+      value: G 510
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6491049c7fe27f14da46bca88ac9a727, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.96862745
@@ -1990,7 +2062,7 @@ PrefabInstance:
     - target: {fileID: 8606831083961239473, guid: 712599262f555b9418f6413952bde880, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1473419042, guid: 8673caad77094474daebf1f7133b329e, type: 3}
+      objectReference: {fileID: 21300000, guid: 19e8f56979c201c44a84873172f37cf1, type: 3}
     - target: {fileID: 8606831083961239473, guid: 712599262f555b9418f6413952bde880, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -2041,6 +2113,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: OlLIVANDERS
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 240
       objectReference: {fileID: 0}
@@ -2082,8 +2158,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 180
+      value: G 240
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 62233d5fa5c900c49bc19688c9561174, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.47058824
@@ -2237,6 +2317,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: HOGS HEAD
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 180
       objectReference: {fileID: 0}
@@ -2278,8 +2362,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 150
+      value: G 180
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9c52ac1b7dedbe841aadb5daf68ee8fb, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.47058824
@@ -2366,6 +2454,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: THE BURROW
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 120
       objectReference: {fileID: 0}
@@ -2407,8 +2499,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 90
+      value: G 120
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 024ad1c9d04da5a469ac412160fc2ba1, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.059115443
@@ -2937,6 +3033,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: GREAT HALL
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 450
       objectReference: {fileID: 0}
@@ -2978,8 +3078,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 330
+      value: G 450
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a62e86fced16acf41b83823c47fa2b37, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.96862745
@@ -3066,6 +3170,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: KNOCKTURN ALLEY
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 60
       objectReference: {fileID: 0}
@@ -3105,10 +3213,24 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 924267566881010870, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: 'KNOCKTURN
+
+        ALLEY'
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 60
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 25ed75dcd385a8e40a7adb61fb568055, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.4392157
@@ -3463,6 +3585,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: CHAMBER OF SECRET
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 420
       objectReference: {fileID: 0}
@@ -3504,8 +3630,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 300
+      value: G 420
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0a85ae33d9e97bf45a1b22342936b1c1, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.4186647
@@ -3592,6 +3722,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: PRIVET DRIVE
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 90
       objectReference: {fileID: 0}
@@ -3635,6 +3769,10 @@ PrefabInstance:
       propertyPath: m_text
       value: G 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9b85c71b7ab27d3439f6901dba7b4dd0, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.059115443
@@ -3720,6 +3858,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
+    - target: {fileID: -8774291971815491167, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
+      propertyPath: name
+      value: DAILY PROPHET  SUBSCRIPTION
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694402896545609904, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
+      propertyPath: m_text
+      value: DAILY PROPHET  SUBSCRIPTION
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694402896545609904, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
+      propertyPath: m_fontSize
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694402896545609904, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3153897204326105423, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.25
@@ -3760,6 +3914,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5663411777736099341, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aaff52ba1dd61924394eecb3cc030f07, type: 3}
     - target: {fileID: 5776948446241689268, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
       propertyPath: m_Name
       value: Tax Node (1)
@@ -3833,6 +3991,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6263514564543670487, guid: a794d39c8f0834e41922f64bdd6a01ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1798bcdad0600604e99ccca0c9b8c1f4, type: 3}
     - target: {fileID: 8962206114131069209, guid: a794d39c8f0834e41922f64bdd6a01ba, type: 3}
       propertyPath: m_Name
       value: Community Node (2)
@@ -4077,6 +4239,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: ROOM OF REQUIREMENT
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 360
       objectReference: {fileID: 0}
@@ -4118,8 +4284,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 270
+      value: G 360
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f0b14a4a29c609a45b0d140f19d63650, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.4186647
@@ -4343,6 +4513,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Utility Node (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2975140494523138941, guid: ea76085ef02bf354ab106c74236d4eee, type: 3}
+      propertyPath: name
+      value: FIREBOLT
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341194372955851848, guid: ea76085ef02bf354ab106c74236d4eee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b1f6c12250f53c942972d45939aa715e, type: 3}
     - target: {fileID: 6823841168433552546, guid: ea76085ef02bf354ab106c74236d4eee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24
@@ -4413,6 +4591,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: SHRIEKING SHACK
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 300
       objectReference: {fileID: 0}
@@ -4452,10 +4634,22 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1250
       objectReference: {fileID: 0}
+    - target: {fileID: 924267566881010870, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924267566881010870, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.12
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 210
+      value: G 300
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 99f4f0eb832e5d145b771c3080f78cca, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.9529412
@@ -4663,6 +4857,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Utility Node
       objectReference: {fileID: 0}
+    - target: {fileID: 2975140494523138941, guid: ea76085ef02bf354ab106c74236d4eee, type: 3}
+      propertyPath: name
+      value: PORTKEY
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341194372955851848, guid: ea76085ef02bf354ab106c74236d4eee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b517ac6a69de9b147a53592b53c2dd81, type: 3}
     - target: {fileID: 6823841168433552546, guid: ea76085ef02bf354ab106c74236d4eee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.509438
@@ -4732,9 +4934,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
+    - target: {fileID: -7169453969590491702, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: name
+      value: GRYFFINDOR
+      objectReference: {fileID: 0}
     - target: {fileID: 1754430202415528729, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
       propertyPath: m_Name
       value: Railroad Node (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773709449960701250, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 240a8b4352b5d304593c2a56f9cb0e9e, type: 3}
+    - target: {fileID: 7319040855513579865, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_text
+      value: GRYFFINDOR
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319040855513579865, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_fontSize
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319040855513579865, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8746792854304123213, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5242,6 +5464,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: HOSPITAL WING
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 540
       objectReference: {fileID: 0}
@@ -5283,8 +5509,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 390
+      value: G 540
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 15483e341f459af4f94b10e83d0911e5, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.101960786
@@ -5599,6 +5829,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: THE LEAKY CAULDRON
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 210
       objectReference: {fileID: 0}
@@ -5638,10 +5872,34 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 875
       objectReference: {fileID: 0}
+    - target: {fileID: 924267566881010870, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924267566881010870, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234619363728891968, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234619363728891968, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: THE LEAKY CAULDRON
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 150
+      value: G 210
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 369d470eaa8bc2c4aa2f1e84ac1412eb, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.47058824
@@ -5934,6 +6192,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: 12 GRIMMAULD PLACE
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 330
       objectReference: {fileID: 0}
@@ -5975,8 +6237,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 240
+      value: G 330
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8a7c1e7609d7cb5498fd5e7f12ba00d4, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.9529412
@@ -6166,9 +6432,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
+    - target: {fileID: -7169453969590491702, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: name
+      value: HUFFLEPUFF
+      objectReference: {fileID: 0}
     - target: {fileID: 1754430202415528729, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
       propertyPath: m_Name
       value: Railroad Node
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773709449960701250, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fb19b5e6b5847eb4898fa96b33ddc684, type: 3}
+    - target: {fileID: 7319040855513579865, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_text
+      value: HUFFLEPUFF
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319040855513579865, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_fontSize
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319040855513579865, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8746792854304123213, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6270,7 +6556,7 @@ PrefabInstance:
     - target: {fileID: 8606831083961239473, guid: 712599262f555b9418f6413952bde880, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1473419042, guid: 8673caad77094474daebf1f7133b329e, type: 3}
+      objectReference: {fileID: 21300000, guid: f8d16654cb5c6464d86927fee517f333, type: 3}
     - target: {fileID: 8606831083961239473, guid: 712599262f555b9418f6413952bde880, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -6321,6 +6607,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: PLATFORM 9 3/4
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 270
       objectReference: {fileID: 0}
@@ -6362,8 +6652,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 210
+      value: G 270
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d4bfde3adbd8d414da526341b0cc4e6b, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.9529412
@@ -6615,6 +6909,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: QUIDDITCH  PITCH
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 480
       objectReference: {fileID: 0}
@@ -6654,10 +6952,18 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 2000
       objectReference: {fileID: 0}
+    - target: {fileID: 924267566881010870, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.12
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 330
+      value: G 480
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8aad05460660994b9f287a9b5e3ff32, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.96862745
@@ -6744,6 +7050,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: HOGWARTS
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 660
       objectReference: {fileID: 0}
@@ -6785,8 +7095,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 480
+      value: G 660
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6e15cbf8f56fd4a499a7823ba368fd9d, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.1019608
@@ -6949,6 +7263,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: FORBIDDEN FORREST
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
       value: 390
       objectReference: {fileID: 0}
@@ -6990,8 +7308,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 270
+      value: G 390
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ea89016be7ecd1d4681ff1799ccf01b5, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.4186647
@@ -7094,16 +7416,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113197667}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.00000002235174, y: -0.0000000372529, z: -0.24781147, w: 0.9688083}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1665847656}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -28.696}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.2500003}
+  m_AnchoredPosition: {x: 0.19, y: 0.6}
   m_SizeDelta: {x: 4.2, y: 4.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2113197669
@@ -7118,7 +7440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 7de57464dea2e834486cbfdc2f95aa38, type: 2}
   m_Color: {r: 0, g: 0, b: 0, a: 0.22745098}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -7199,7 +7521,7 @@ PrefabInstance:
     - target: {fileID: 8606831083961239473, guid: 712599262f555b9418f6413952bde880, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1473419042, guid: 8673caad77094474daebf1f7133b329e, type: 3}
+      objectReference: {fileID: 21300000, guid: cf628c82733fc6f46a50fa8f6185bbf6, type: 3}
     - target: {fileID: 8606831083961239473, guid: 712599262f555b9418f6413952bde880, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -7289,6 +7611,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6263514564543670487, guid: a794d39c8f0834e41922f64bdd6a01ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5f9698acb3d5cfd439fef09669d225fc, type: 3}
     - target: {fileID: 8962206114131069209, guid: a794d39c8f0834e41922f64bdd6a01ba, type: 3}
       propertyPath: m_Name
       value: Community Node
@@ -7325,6 +7651,10 @@ PrefabInstance:
     - target: {fileID: 26718165710576052, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: name
+      value: "BORGIN AND \LBURKES"
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
@@ -7374,10 +7704,34 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 125
       objectReference: {fileID: 0}
+    - target: {fileID: 924267566881010870, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234619363728891968, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: Property
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_fontSize
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: G 60
+      value: G 30
       objectReference: {fileID: 0}
+    - target: {fileID: 6072752677961537930, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e94630d3c32eb346b7099dbd7d19a8d, type: 3}
     - target: {fileID: 7004956824515469651, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_Color.b
       value: 0.4392157
@@ -7464,8 +7818,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 819750323}
     m_Modifications:
     - target: {fileID: -8774291971815491167, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
+      propertyPath: name
+      value: GRINGOTTS BANKING FEE
+      objectReference: {fileID: 0}
+    - target: {fileID: -8774291971815491167, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
       propertyPath: calculateRentAuto
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694402896545609904, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
+      propertyPath: m_text
+      value: GRINGOTTS BANKING FEE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694402896545609904, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
+      propertyPath: m_fontSize
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694402896545609904, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3153897204326105423, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7507,6 +7877,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5663411777736099341, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f5c8d97d043d2a74eab6f48113f23824, type: 3}
     - target: {fileID: 5776948446241689268, guid: e0401c66a268bbd47bfe8743c78453dc, type: 3}
       propertyPath: m_Name
       value: Tax Node
