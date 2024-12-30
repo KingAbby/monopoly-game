@@ -31,6 +31,7 @@ public class Player
     public bool IsInJail => isInJail;
     public GameObject MyToken => myToken;
     public MonopolyNode MyMonopolyNode => currentNode;
+    public int ReadMoney => money;
 
     // MESSAGE SYSTEM
     public delegate void UpdateMessage(string message);
@@ -122,6 +123,7 @@ public class Player
         //myToken.transform.position = MonopolyBoard.Instance.route[10].transform.position;
         //currentNode = MonopolyBoard.Instance.route[10];
         MonopolyBoard.Instance.MovePlayerToken(CalculateDistanceFromJail(indexOnBoard), this);
+        GameManager.instance.ResetRolledADouble();
     }
 
     public void GetOutOfJail()
@@ -152,5 +154,27 @@ public class Player
     public void IncreaseNumTurnsInJail()
     {
         numTurnsInJail++;
+    }
+
+    //-------------------------------STREET REPAIRS------------------------------- 
+    public int[] CountHousesandHotels()
+    {
+        int houses = 0; //INDEX 0
+        int hotels = 0; //INDEX 1
+
+        foreach (var node in myMonopolyNodes)
+        {
+            if (node.NumberOfHouses != 5)
+            {
+                houses += node.NumberOfHouses;
+            }
+            else
+            {
+                hotels += 1;
+            }
+        }
+
+        int[] allBuildings = new int[] { houses, hotels };
+        return allBuildings;
     }
 }
