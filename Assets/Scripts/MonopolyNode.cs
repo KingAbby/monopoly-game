@@ -48,6 +48,10 @@ public class MonopolyNode : MonoBehaviour
     [SerializeField] TMP_Text ownerText;
     public Player owner;
 
+    // MESSAGE SYSTEM
+    public delegate void UpdateMessage(string message);
+    public static UpdateMessage OnUpdateMessage;
+
     public Player Owner => owner;
     public void setOwner(Player newOwner)
     {
@@ -182,18 +186,18 @@ public class MonopolyNode : MonoBehaviour
                         //PAY RENT
 
                         //CALCULATE RENT
-                        Debug.Log(currentPlayer.name + " Should Pay Rent To: " + owner.name);
                         int rentToPay = CalculatePropertyRent();
                         //PAY RENT TO OWNER
                         currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
-                        Debug.Log(currentPlayer.name + " Pays Rent of " + rentToPay + " to " + owner.name);
+                        OnUpdateMessage.Invoke(currentPlayer.name + " Pays Rent of " + rentToPay + " G Coins to " + owner.name);
                     }
                     else if (owner.name == "" && currentPlayer.CanAffordNode(price))
                     {
                         //BUY NODE
-                        Debug.Log(currentPlayer.name + " Might Buy Property");
+                        //Debug.Log(currentPlayer.name + " Might Buy Property");
+                        OnUpdateMessage.Invoke(currentPlayer.name + " buys " + this.name);
                         currentPlayer.BuyProperty(this);
                         OnOwnerUpdated();
 
@@ -242,12 +246,13 @@ public class MonopolyNode : MonoBehaviour
                         currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
-                        Debug.Log(currentPlayer.name + " Pays Rent of " + rentToPay + " G Coins to " + owner.name);
+                        OnUpdateMessage.Invoke(currentPlayer.name + " Pays Utility Rent of " + rentToPay + " G Coins to " + owner.name);
                     }
                     else if (owner.name == "" && currentPlayer.CanAffordNode(price))
                     {
                         //BUY NODE
-                        Debug.Log(currentPlayer.name + " Might Buy Utility");
+                        // Debug.Log(currentPlayer.name + " Might Buy Utility");
+                        OnUpdateMessage.Invoke(currentPlayer.name + " buys " + this.name);
                         currentPlayer.BuyProperty(this);
                         OnOwnerUpdated();
 
@@ -296,12 +301,13 @@ public class MonopolyNode : MonoBehaviour
                         currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
-                        Debug.Log(currentPlayer.name + " Pays Rent of " + rentToPay + " G Coins to " + owner.name);
+                        OnUpdateMessage.Invoke(currentPlayer.name + " Pays Railroad Rent of " + rentToPay + " G Coins to " + owner.name);
                     }
                     else if (owner.name == "" && currentPlayer.CanAffordNode(price))
                     {
                         //BUY NODE
-                        Debug.Log(currentPlayer.name + " Might Buy Railroad Facility ");
+                        // Debug.Log(currentPlayer.name + " Might Buy Railroad Facility ");
+                        OnUpdateMessage.Invoke(currentPlayer.name + " buys " + this.name);
                         currentPlayer.BuyProperty(this);
                         OnOwnerUpdated();
 
@@ -339,17 +345,20 @@ public class MonopolyNode : MonoBehaviour
                 GameManager.instance.AddTaxToPool(price);
                 currentPlayer.PayMoney(price);
                 //SHOW MESSAGE
+                OnUpdateMessage.Invoke(currentPlayer.name + " <color=red>Pays Tax</color> of " + price + " G Coins");
                 break;
             case MonopolyNodeType.FreeParking:
                 int tax = GameManager.instance.GetTaxPool();
                 currentPlayer.CollectMoney(tax);
                 //SHOW MESSAGE
+                OnUpdateMessage.Invoke(currentPlayer.name + " <color=green>Collects</color> " + tax + " G Coins from Free Parking");
                 break;
             case MonopolyNodeType.GoToJail:
                 int indexOnBoard = MonopolyBoard.Instance.route.IndexOf(currentPlayer.MyMonopolyNode);
                 currentPlayer.GoToJail(indexOnBoard);
                 continueTurn = false;
                 //SHOW MESSAGE
+                OnUpdateMessage.Invoke(currentPlayer.name + " <color=red>Goes to Jail!</color>");
                 break;
             case MonopolyNodeType.Chance:
 
@@ -367,7 +376,7 @@ public class MonopolyNode : MonoBehaviour
         //Lanjut
         if (!playerIsHuman)
         {
-            Invoke("ContinueGame", 2f);
+            Invoke("ContinueGame", GameManager.instance.SecondsBetweenTurns);
         }
         else
         {
