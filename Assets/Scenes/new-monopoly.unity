@@ -415,6 +415,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 2500
       objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: HOGSMEADE
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 600
@@ -660,6 +664,8 @@ MonoBehaviour:
   currentRent: 0
   baseRent: 0
   rentWithHouses: 
+  houses: []
+  hotel: {fileID: 0}
   mortgageImage: {fileID: 0}
   propertyImage: {fileID: 0}
   isMortgaged: 0
@@ -727,6 +733,8 @@ MonoBehaviour:
   currentRent: 0
   baseRent: 0
   rentWithHouses: 
+  houses: []
+  hotel: {fileID: 0}
   mortgageImage: {fileID: 0}
   propertyImage: {fileID: 0}
   isMortgaged: 0
@@ -1285,6 +1293,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 2625
       objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: MINISTRY OF  MAGIC
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 630
@@ -1390,6 +1402,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 18bbdbd6b948e474cb549abe8ad3a0cc, type: 3}
+    - target: {fileID: 7319040855513579865, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
+      propertyPath: m_text
+      value: SLYTHERIN
+      objectReference: {fileID: 0}
     - target: {fileID: 8746792854304123213, guid: 9611ab1baf74d5f44a8beefabcb9ba86, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.75
@@ -1896,6 +1912,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 2375
       objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: DIAGON ALLEY
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 570
@@ -2032,6 +2052,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: OlLIVANDERS
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -2490,6 +2514,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 2125
       objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: DUMBLEDORE.S  OFFICE
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 510
@@ -2791,6 +2819,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: OlLIVANDERS
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 240
@@ -2932,6 +2964,8 @@ MonoBehaviour:
   currentRent: 0
   baseRent: 0
   rentWithHouses: 
+  houses: []
+  hotel: {fileID: 0}
   mortgageImage: {fileID: 0}
   propertyImage: {fileID: 0}
   isMortgaged: 0
@@ -2994,6 +3028,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: HOGS HEAD
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -3131,6 +3169,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: THE BURROW
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -3934,6 +3976,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1875
       objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: GREAT HALL
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 450
@@ -4077,9 +4123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: 'KNOCKTURN
-
-        ALLEY'
+      value: KNOCKTURN ALLEY
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -4723,6 +4767,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1750
       objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: CHAMBER OF SECRET
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 420
@@ -4960,6 +5008,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: PRIVET DRIVE
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -5478,6 +5530,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1500
       objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: ROOM OF REQUIREMENT
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 360
@@ -5708,6 +5764,10 @@ PrefabInstance:
     - target: {fileID: 380709796709557440, guid: ea76085ef02bf354ab106c74236d4eee, type: 3}
       propertyPath: m_Name
       value: Utility Node (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573581415472301524, guid: ea76085ef02bf354ab106c74236d4eee, type: 3}
+      propertyPath: m_text
+      value: FIREBOLT
       objectReference: {fileID: 0}
     - target: {fileID: 2975140494523138941, guid: ea76085ef02bf354ab106c74236d4eee, type: 3}
       propertyPath: name
@@ -5991,6 +6051,10 @@ PrefabInstance:
     - target: {fileID: 924267566881010870, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 3.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: SHRIEKING SHACK
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -6281,6 +6345,10 @@ PrefabInstance:
     - target: {fileID: 380709796709557440, guid: ea76085ef02bf354ab106c74236d4eee, type: 3}
       propertyPath: m_Name
       value: Utility Node
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573581415472301524, guid: ea76085ef02bf354ab106c74236d4eee, type: 3}
+      propertyPath: m_text
+      value: PORTKEY
       objectReference: {fileID: 0}
     - target: {fileID: 2975140494523138941, guid: ea76085ef02bf354ab106c74236d4eee, type: 3}
       propertyPath: name
@@ -6840,6 +6908,8 @@ MonoBehaviour:
   currentRent: 0
   baseRent: 0
   rentWithHouses: 
+  houses: []
+  hotel: {fileID: 0}
   mortgageImage: {fileID: 0}
   propertyImage: {fileID: 0}
   isMortgaged: 0
@@ -7300,6 +7370,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 2250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: HOSPITAL WING
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -8029,6 +8103,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1375
       objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: 12 GRIMMAULD PLACE
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 330
@@ -8444,6 +8522,10 @@ PrefabInstance:
       propertyPath: rentWithHouses.Array.data[4]
       value: 1125
       objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: PLATFORM 9 3/4
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 270
@@ -8750,6 +8832,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 3.12
       objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: QUIDDITCH  PITCH
+      objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
       value: G 480
@@ -9020,6 +9106,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 2750
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: HOGWARTS
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -9368,6 +9458,10 @@ PrefabInstance:
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
       value: 1625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: m_text
+      value: FORBIDDEN FORREST
       objectReference: {fileID: 0}
     - target: {fileID: 5839948490506872843, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -9777,7 +9871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
-      value: Property
+      value: "BORGIN AND \LBURKES"
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_fontSize
