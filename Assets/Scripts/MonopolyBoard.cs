@@ -57,7 +57,7 @@ public class MonopolyBoard : MonoBehaviour
         int startSearchIndex = (indexOnBoard + 1) % route.Count;
         int nodeSearches = 0;
 
-        while(indexOfNextNodeType == -1 && nodeSearches < route.Count)
+        while (indexOfNextNodeType == -1 && nodeSearches < route.Count)
         {
             if (route[startSearchIndex].monopolyNodeType == type)
             {
@@ -156,8 +156,11 @@ public class MonopolyBoard : MonoBehaviour
                 //LINQ
                 allSame = nodeSet.nodesInSetList.All(_node => _node.Owner == node.Owner);
                 return (nodeSet.nodesInSetList, allSame);
+                
             }
         }
         return (null, allSame);
     }
+
+
 }
