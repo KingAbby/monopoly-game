@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System.Collections.ObjectModel;
 
 [System.Serializable]
 public class Player
@@ -25,7 +26,7 @@ public class Player
     PlayerInfo myInfo;
 
     // AI
-    int aiMoneySavety = 500;
+    int aiMoneySavity = 500;
 
     // RETURN SOME INFOS
     public bool IsInJail => isInJail;
@@ -53,6 +54,12 @@ public class Player
         newNode.PlayerLandedOnNode(this);
 
         // IF ITS AI PLAYER
+        if (playerType == PlayerType.AI)
+        {
+            // CHECK IF PLAYER CAN BUY PROPERTY
+            CheckIfPlayerHasASet();
+
+        }
 
         // CHECK IF CAN BUILD HOUSES
 
@@ -156,7 +163,7 @@ public class Player
         numTurnsInJail++;
     }
 
-    //-------------------------------STREET REPAIRS------------------------------- 
+    //-------------------------------STREET REPAIRS-------------------------------------------------
     public int[] CountHousesandHotels()
     {
         int houses = 0; //INDEX 0
@@ -176,5 +183,75 @@ public class Player
 
         int[] allBuildings = new int[] { houses, hotels };
         return allBuildings;
+    }
+
+    //-------------------------------CHECK IF PLAYER HAS PROPERTY SET-------------------------------
+    void CheckIfPlayerHasASet()
+    {
+        List<MonopolyNode> processedSet = null;
+        foreach (var node in myMonopolyNodes)
+        {
+            var (list, allSame) = MonopolyBoard.Instance.PlayerHasAllNodesOfSet(node);
+            if (!allSame)
+            {
+                continue;
+            }
+            List<MonopolyNode> nodeSet = list;
+            if (nodeSet != null && nodeSet != processedSet)
+            {
+                bool hasMortgadedNode = nodeSet.Any(node => node.IsMortgaged) ? true : false;
+                if (!hasMortgadedNode)
+                {
+                    if (nodeSet[0].monopolyNodeType == MonopolyNodeType.Property)
+                    {
+                        //COULD BUILD A HOUSES ON THE SET
+                        BuildHouseOrHotelEvenly(nodeSet);
+                        //UPDATE PROCESS SET
+                        processedSet = nodeSet;
+                    }
+                }
+            }
+        }
+    }
+    //-------------------------------BUILD HOUSES EVENLY ON NODE SETS-------------------------------------------------
+    void BuildHouseOrHotelEvenly(List<MonopolyNode> nodesToBuildOn)
+    {
+        int minHouses = int.MaxValue;
+        int maxHouses = int.MinValue;
+        //GET MIN AND MAX HOUSES CURRENTLY ON PROPERTY
+        foreach (var node in nodesToBuildOn)
+        {
+            int numOfHouses = node.NumberOfHouses;
+            if (numOfHouses < minHouses)
+            {
+                minHouses = numOfHouses;
+            }
+            if (numOfHouses > maxHouses && numOfHouses < 5)
+            {
+                maxHouses = numOfHouses;
+            }
+        }
+
+        //BUY HOUSES ON PROPERTY
+        foreach (var node in nodesToBuildOn)
+        {
+            if (node.NumberOfHouses == minHouses && node.NumberOfHouses < 5 && CanAffordHouse(node.houseCost))
+            {
+                node.BuildHouseOrHotel();
+                PayMoney(node.houseCost);
+
+                break;
+            }
+        }
+    }
+    //-------------------------------CAN AFFORD & COUNT HOUSES/HOTELS-------------------------------------------------
+    bool CanAffordHouse(int price)
+    {
+        if (playerType == PlayerType.AI)// AI
+        {
+            return (money - aiMoneySavity) >= price;
+        }
+        //HUMAN
+        return money >= price;
     }
 }
