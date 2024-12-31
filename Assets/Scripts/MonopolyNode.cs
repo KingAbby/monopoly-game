@@ -56,8 +56,8 @@ public class MonopolyNode : MonoBehaviour
     public delegate void DrawSpellsCard(Player player);
     public static DrawSpellsCard OnDrawSpellsCard;
     // DRAG A CHANCE CARD
-    public delegate void DrawChanceCard(Player player);
-    public static DrawChanceCard OnDrawChanceCard;
+    public delegate void DrawPotionCard(Player player);
+    public static DrawPotionCard OnDrawPotionCard;
     public Player Owner => owner;
     public void setOwner(Player newOwner)
     {
@@ -367,7 +367,8 @@ public class MonopolyNode : MonoBehaviour
                 OnUpdateMessage.Invoke(currentPlayer.name + " <color=red>Goes to Jail!</color>");
                 break;
             case MonopolyNodeType.Chance:
-
+                OnDrawPotionCard.Invoke(currentPlayer);
+                continueTurn = false;
                 break;
             case MonopolyNodeType.CommunityChest:
                 OnDrawSpellsCard.Invoke(currentPlayer);

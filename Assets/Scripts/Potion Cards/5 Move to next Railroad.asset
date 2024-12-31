@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08fd913109075942a5b8ce3aa4a56ce, type: 3}
+  m_Name: 5 Move to next Railroad
+  m_EditorClassIdentifier: 
+  textOnCard: Advance token to nearest <color=white>Dormitory</color>
+  rewardMoney: 0
+  penalityMoney: 0
+  moveToBoardIndex: -1
+  payToPlayer: 0
+  nextRailRoad: 1
+  nextUtility: 0
+  moveStepsBackwards: 0
+  goToJail: 0
+  jailFreeCard: 0
+  streetRepairs: 0
+  streetRepairsHousePrice: 25
+  streetRepairsHotelPrice: 100
