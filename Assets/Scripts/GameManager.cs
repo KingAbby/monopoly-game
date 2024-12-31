@@ -90,11 +90,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("Rolled dice are: " + rolledDice[0] + " & " + rolledDice[1]);
 
         //DEBUG
-        if (alwaysDoubleRoll)
-        {
-            rolledDice[0] = 1;
-            rolledDice[1] = 1;
-        }
+        // if (alwaysDoubleRoll)
+        // {
+        //     rolledDice[0] = 1;
+        //     rolledDice[1] = 1;
+        // }
+
+        // rolledDice[0] = 36;
+        // rolledDice[1] = 0;
 
         // CHECK FOR DOUBLE
         rolledADouble = rolledDice[0] == rolledDice[1];
