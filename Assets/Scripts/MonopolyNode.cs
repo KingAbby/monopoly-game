@@ -481,7 +481,7 @@ public class MonopolyNode : MonoBehaviour
 
     void VisualizeHouses()
     {
-        switch(numberOfHouses)
+        switch (numberOfHouses)
         {
             case 0:
                 houses[0].SetActive(false);
@@ -489,80 +489,82 @@ public class MonopolyNode : MonoBehaviour
                 houses[2].SetActive(false);
                 houses[3].SetActive(false);
                 hotel.SetActive(false);
-            break;
+                break;
             case 1:
                 houses[0].SetActive(true);
                 houses[1].SetActive(false);
                 houses[2].SetActive(false);
                 houses[3].SetActive(false);
                 hotel.SetActive(false);
-            break;
+                break;
             case 2:
                 houses[0].SetActive(true);
                 houses[1].SetActive(true);
                 houses[2].SetActive(false);
                 houses[3].SetActive(false);
                 hotel.SetActive(false);
-            break;
+                break;
             case 3:
                 houses[0].SetActive(true);
                 houses[1].SetActive(true);
                 houses[2].SetActive(true);
                 houses[3].SetActive(false);
                 hotel.SetActive(false);
-            break;
+                break;
             case 4:
                 houses[0].SetActive(true);
                 houses[1].SetActive(true);
                 houses[2].SetActive(true);
                 houses[3].SetActive(true);
                 hotel.SetActive(false);
-            break;
+                break;
             case 5:
                 houses[0].SetActive(false);
                 houses[1].SetActive(false);
                 houses[2].SetActive(false);
                 houses[3].SetActive(false);
                 hotel.SetActive(true);
-            break;
+                break;
         }
     }
 
     public void BuildHouseOrHotel()
     {
-        if(monopolyNodeType == MonopolyNodeType.Property)
+        if (monopolyNodeType == MonopolyNodeType.Property)
         {
             numberOfHouses++;
             VisualizeHouses();
         }
     }
 
-    public void SellHouseOrHotel()
+    public int SellHouseOrHotel()
     {
-        if(monopolyNodeType == MonopolyNodeType.Property)
+        if (monopolyNodeType == MonopolyNodeType.Property)
         {
             numberOfHouses--;
             VisualizeHouses();
         }
+        return houseCost / 2; //ANY NUMBER
     }
 
     public void ResetNode()
     {
-        if(isMortgaged)
+        if (isMortgaged)
         {
             propertyImage.SetActive(true);
             mortgageImage.SetActive(false);
             isMortgaged = false;
         }
         // RESET HOUSES AND HOTEL
-        if(monopolyNodeType == MonopolyNodeType.Property)
+        if (monopolyNodeType == MonopolyNodeType.Property)
         {
             numberOfHouses = 0;
             VisualizeHouses();
         }
         // RESET OWNER
-        
+
         // REMOVE PROPERTY FROM OWNER
+        owner.RemoveProperty(this);
         owner.name = "";
         // UPDATE UI
         OnOwnerUpdated();
