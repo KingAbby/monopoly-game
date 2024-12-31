@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
             GameObject newToken = Instantiate(playerTokenList[randomIndex], gameBoard.route[0].transform.position, Quaternion.identity);
             playerList[i].Initialize(gameBoard.route[0], startMoney, info, newToken);
         }
+        playerList[currentPlayer].ActivateSelector(true);
     }
 
     // PRESS BUTTON FROM HUMAN - OR AUTO FROM AI
@@ -186,6 +187,7 @@ public class GameManager : MonoBehaviour
     public void SwitchPlayer()
     {
         currentPlayer++;
+
         // ROLL DOUBLE?
         doubleRollCount = 0;
 
@@ -194,7 +196,8 @@ public class GameManager : MonoBehaviour
         {
             currentPlayer = 0;
         }
-
+        DeactivateStaff();
+        playerList[currentPlayer].ActivateSelector(true);
         // CHECK IF IN JAIL
 
         // IF AI PLAYER
@@ -220,5 +223,35 @@ public class GameManager : MonoBehaviour
         taxPool = 0; //reset tax pool
         //send temp
         return currentTaxCollected;
+    }
+
+    //----------------------------------GAMEOVER----------------------------------------------------------------
+    public void RemovePlayer(Player player)
+    {
+        playerList.Remove(player);
+        //CHECK FOR GAME OVER
+        CheckForGameOver();
+    }
+
+    void CheckForGameOver()
+    {
+        if (playerList.Count == 1)
+        {
+            //THE WINNER
+            Debug.Log(playerList[0].name + " has WON THE GAME!");
+            OnUpdateMessage.Invoke(playerList[0].name + " has WON THE GAME!");
+            //STOP THE GAME LOOP
+
+            //SHOW UI
+        }
+    }
+
+    //--------------------------------UI COMMANDS----------------------------------------------------------------
+    void DeactivateStaff()
+    {
+        foreach (var player in playerList)
+        {
+            player.ActivateSelector(false);
+        }
     }
 }
