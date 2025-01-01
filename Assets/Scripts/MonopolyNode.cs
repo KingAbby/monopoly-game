@@ -64,7 +64,10 @@ public class MonopolyNode : MonoBehaviour
     // HUMAN INPUT PANEL
     public delegate void ShowHumanPanel(bool activatePanel, bool activateRollDice, bool activateEndTurn);
     public static ShowHumanPanel OnShowHumanPanel;
-    
+    //PROPERTY BUY PANEL
+    public delegate void ShowPropertyBuyPanel(MonopolyNode node, Player player);
+    public static ShowPropertyBuyPanel OnShowPropertyBuyPanel;
+
     public Player Owner => owner;
     public void setOwner(Player newOwner)
     {
@@ -194,7 +197,7 @@ public class MonopolyNode : MonoBehaviour
                 if (!playerIsHuman)//AI player
                 {
                     //IF IT OWNED AND WERE NOT THE OWNER AND IS NOT MORTGAGED
-                    if (owner.name != "" && owner != currentPlayer && !isMortgaged)
+                    if (owner != null && owner != currentPlayer && !isMortgaged)
                     {
                         //PAY RENT
 
@@ -206,7 +209,7 @@ public class MonopolyNode : MonoBehaviour
                         //SHOW MESSAGE
                         OnUpdateMessage.Invoke(currentPlayer.name + " Pays Rent of " + rentToPay + " G Coins to " + owner.name);
                     }
-                    else if (owner.name == "" && currentPlayer.CanAffordNode(price))
+                    else if (owner == null && currentPlayer.CanAffordNode(price))
                     {
                         //BUY NODE
                         //Debug.Log(currentPlayer.name + " Might Buy Property");
@@ -224,7 +227,7 @@ public class MonopolyNode : MonoBehaviour
                 else//Human Player
                 {
                     //IF IT OWNED AND WERE NOT THE OWNER AND IS NOT MORTGAGED
-                    if (owner.name != "" && owner != currentPlayer && isMortgaged)
+                    if (owner != null && owner != currentPlayer && !isMortgaged)
                     {
                         //PAY RENT
 
@@ -234,9 +237,10 @@ public class MonopolyNode : MonoBehaviour
 
                         //SHOW MESSAGE
                     }
-                    else if (owner.name == "" /*&& IF CAN AFFORD */)
+                    else if (owner == null)
                     {
                         //SHOW BUY INTERFACE FOR PROPERTY
+                        OnShowPropertyBuyPanel.Invoke(this, currentPlayer);
                     }
                     else
                     {
