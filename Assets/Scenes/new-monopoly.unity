@@ -5714,7 +5714,7 @@ MonoBehaviour:
     myToken: {fileID: 0}
     myMonopolyNodes: []
   - playerType: 0
-    name: PLAYER
+    name: AI_Bob
     myToken: {fileID: 0}
     myMonopolyNodes: []
   currentPlayer: 0

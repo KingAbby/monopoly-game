@@ -190,14 +190,15 @@ public class MonopolyNode : MonoBehaviour
     {
         bool playerIsHuman = currentPlayer.playerType == Player.PlayerType.HUMAN;
         bool continueTurn = true;
-        //Check Tipe Node dan lakukan sesuai tipe
+
+        //CHECK FOR NODE TYPE AND ACT ACCORDINGLY
         switch (monopolyNodeType)
         {
             case MonopolyNodeType.Property:
                 if (!playerIsHuman)//AI player
                 {
                     //IF IT OWNED AND WERE NOT THE OWNER AND IS NOT MORTGAGED
-                    if (owner != null && owner != currentPlayer && !isMortgaged)
+                    if (owner.name != "" && owner != currentPlayer && !isMortgaged)
                     {
                         //PAY RENT
 
@@ -209,7 +210,7 @@ public class MonopolyNode : MonoBehaviour
                         //SHOW MESSAGE
                         OnUpdateMessage.Invoke(currentPlayer.name + " Pays Rent of " + rentToPay + " G Coins to " + owner.name);
                     }
-                    else if (owner == null && currentPlayer.CanAffordNode(price))
+                    else if (owner.name == "" && currentPlayer.CanAffordNode(price))
                     {
                         //BUY NODE
                         //Debug.Log(currentPlayer.name + " Might Buy Property");
@@ -283,7 +284,7 @@ public class MonopolyNode : MonoBehaviour
                 else//Human Player
                 {
                     //IF IT OWNED AND WERE NOT THE OWNER AND IS NOT MORTGAGED
-                    if (owner.name != "" && owner != currentPlayer && isMortgaged)
+                    if (owner != null && owner != currentPlayer && isMortgaged)
                     {
                         //PAY RENT
 
@@ -293,7 +294,7 @@ public class MonopolyNode : MonoBehaviour
 
                         //SHOW MESSAGE
                     }
-                    else if (owner.name == "" /*&& IF CAN AFFORD */)
+                    else if (owner == null /*&& IF CAN AFFORD */)
                     {
                         //SHOW BUY INTERFACE FOR PROPERTY
                     }
@@ -338,7 +339,7 @@ public class MonopolyNode : MonoBehaviour
                 else//Human Player
                 {
                     //IF IT OWNED AND WERE NOT THE OWNER AND IS NOT MORTGAGED
-                    if (owner.name != "" && owner != currentPlayer && isMortgaged)
+                    if (owner != null && owner != currentPlayer && isMortgaged)
                     {
                         //PAY RENT
 
@@ -348,7 +349,7 @@ public class MonopolyNode : MonoBehaviour
 
                         //SHOW MESSAGE
                     }
-                    else if (owner.name == "" /*&& IF CAN AFFORD */)
+                    else if (owner == null /*&& IF CAN AFFORD */)
                     {
                         //SHOW BUY INTERFACE FOR PROPERTY
                     }
@@ -457,17 +458,17 @@ public class MonopolyNode : MonoBehaviour
 
     int CalculateUtilityRent()
     {
-        int[] lastRolledDice = GameManager.instance.LastRolledDice; // last; // last
+        int[] lastRolledDice = GameManager.instance.LastRolledDice;
 
         int result = 0;
         var (list, allSame) = MonopolyBoard.Instance.PlayerHasAllNodesOfSet(this);
         if (allSame)
         {
-            result = lastRolledDice[0] + lastRolledDice[1] * 10;
+            result = (lastRolledDice[0] + lastRolledDice[1]) * 10;
         }
         else
         {
-            result = lastRolledDice[0] + lastRolledDice[1] * 4;
+            result = (lastRolledDice[0] + lastRolledDice[1]) * 4;
         }
 
         return result;

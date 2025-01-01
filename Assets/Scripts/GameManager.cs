@@ -75,13 +75,13 @@ public class GameManager : MonoBehaviour
             // RANDOM TOKEN
             int randomIndex = Random.Range(0, playerTokenList.Count);
 
-            // Instatntiate player token
+            // Instantiate player token
             GameObject newToken = Instantiate(playerTokenList[randomIndex], gameBoard.route[0].transform.position, Quaternion.identity);
             playerList[i].Initialize(gameBoard.route[0], startMoney, info, newToken);
         }
         playerList[currentPlayer].ActivateSelector(true);
 
-        if(playerList[currentPlayer].playerType == Player.PlayerType.HUMAN)
+        if (playerList[currentPlayer].playerType == Player.PlayerType.HUMAN)
         {
             OnShowHumanPanel.Invoke(true, true, false);
         }
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
         {
             OnShowHumanPanel.Invoke(false, false, false);
         }
-        
+
     }
 
     // PRESS BUTTON FROM HUMAN - OR AUTO FROM AI
@@ -182,7 +182,7 @@ public class GameManager : MonoBehaviour
 
 
         // SHOW OR HIDE UI
-        if(playerList[currentPlayer].playerType == Player.PlayerType.HUMAN)
+        if (playerList[currentPlayer].playerType == Player.PlayerType.HUMAN)
         {
             OnShowHumanPanel.Invoke(true, false, false);
         }
