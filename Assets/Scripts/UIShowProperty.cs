@@ -30,7 +30,7 @@ public class UIShowProperty : MonoBehaviour
     [SerializeField] TMP_Text propertyPriceText;
     [SerializeField] TMP_Text playerMoneyText;
 
-    void Enable()
+    void OnEnable()
     {
         MonopolyNode.OnShowPropertyBuyPanel += ShowBuyPropertyUi;
     }
@@ -85,7 +85,7 @@ public class UIShowProperty : MonoBehaviour
         playerReference.BuyProperty(nodeReference);
         //CLOSE PROPERTY CARD
 
-        //MAKE THE BUTTON NOT INTERACTABLE
+        //MAKE THE BUTTON NOT INTERACTABLE ANYMORE
         buyPropertyButton.interactable = false;
     }
 

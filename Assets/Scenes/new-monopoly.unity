@@ -4860,13 +4860,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576271578}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5978372, y: 0.000120721816, z: 0.00021234564, w: -0.8016175}
-  m_LocalPosition: {x: -42, y: 79, z: 8.6}
+  m_LocalRotation: {x: 0.60876137, y: 0, z: 0, w: 0.7933534}
+  m_LocalPosition: {x: -40, y: 87, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
 --- !u!1 &605040503
 GameObject:
   m_ObjectHideFlags: 0
@@ -5705,15 +5705,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameBoard: {fileID: 819750322}
   playerList:
+  - playerType: 0
+    name: AI_Bob
+    myToken: {fileID: 0}
+    myMonopolyNodes: []
   - playerType: 1
     name: AI_Toni
     myToken: {fileID: 0}
     myMonopolyNodes: []
   - playerType: 1
-    name: AI_Bob
-    myToken: {fileID: 0}
-    myMonopolyNodes: []
-  - playerType: 0
     name: AI_Bob
     myToken: {fileID: 0}
     myMonopolyNodes: []
