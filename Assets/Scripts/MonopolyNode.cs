@@ -72,6 +72,7 @@ public class MonopolyNode : MonoBehaviour
     public void setOwner(Player newOwner)
     {
         owner = newOwner;
+        OnOwnerUpdated();
     }
 
     void OnValidate()
@@ -216,7 +217,7 @@ public class MonopolyNode : MonoBehaviour
                         //Debug.Log(currentPlayer.name + " Might Buy Property");
                         OnUpdateMessage.Invoke(currentPlayer.name + " buys " + this.name);
                         currentPlayer.BuyProperty(this);
-                        OnOwnerUpdated();
+                        // OnOwnerUpdated();
 
                         //SHOW MESSAGE
                     }
@@ -228,17 +229,18 @@ public class MonopolyNode : MonoBehaviour
                 else//Human Player
                 {
                     //IF IT OWNED AND WERE NOT THE OWNER AND IS NOT MORTGAGED
-                    if (owner != null && owner != currentPlayer && !isMortgaged)
+                    if (owner.name != "" && owner != currentPlayer && !isMortgaged)
                     {
                         //PAY RENT
 
                         //CALCULATE RENT
-
+                        int rentToPay = CalculatePropertyRent();
                         //PAY RENT TO OWNER
+                        currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
                     }
-                    else if (owner == null)
+                    else if (owner.name == "")
                     {
                         //SHOW BUY INTERFACE FOR PROPERTY
                         OnShowPropertyBuyPanel.Invoke(this, currentPlayer);
@@ -272,7 +274,7 @@ public class MonopolyNode : MonoBehaviour
                         // Debug.Log(currentPlayer.name + " Might Buy Utility");
                         OnUpdateMessage.Invoke(currentPlayer.name + " buys " + this.name);
                         currentPlayer.BuyProperty(this);
-                        OnOwnerUpdated();
+                        // OnOwnerUpdated();
 
                         //SHOW MESSAGE
                     }
@@ -284,17 +286,19 @@ public class MonopolyNode : MonoBehaviour
                 else//Human Player
                 {
                     //IF IT OWNED AND WERE NOT THE OWNER AND IS NOT MORTGAGED
-                    if (owner != null && owner != currentPlayer && isMortgaged)
+                    if (owner.name != "" && owner != currentPlayer && isMortgaged)
                     {
                         //PAY RENT
 
                         //CALCULATE RENT
-
+                        int rentToPay = CalculateUtilityRent();
+                        currentRent = rentToPay;
                         //PAY RENT TO OWNER
+                        currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
                     }
-                    else if (owner == null /*&& IF CAN AFFORD */)
+                    else if (owner.name == "" /*&& IF CAN AFFORD */)
                     {
                         //SHOW BUY INTERFACE FOR PROPERTY
                     }
@@ -327,7 +331,7 @@ public class MonopolyNode : MonoBehaviour
                         // Debug.Log(currentPlayer.name + " Might Buy Railroad Facility ");
                         OnUpdateMessage.Invoke(currentPlayer.name + " buys " + this.name);
                         currentPlayer.BuyProperty(this);
-                        OnOwnerUpdated();
+                        // OnOwnerUpdated();
 
                         //SHOW MESSAGE
                     }
@@ -339,17 +343,19 @@ public class MonopolyNode : MonoBehaviour
                 else//Human Player
                 {
                     //IF IT OWNED AND WERE NOT THE OWNER AND IS NOT MORTGAGED
-                    if (owner != null && owner != currentPlayer && isMortgaged)
+                    if (owner.name != "" && owner != currentPlayer && isMortgaged)
                     {
                         //PAY RENT
 
                         //CALCULATE RENT
-
+                        int rentToPay = CalculateRailroadRent();
+                        currentRent = rentToPay;
                         //PAY RENT TO OWNER
+                        currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
                     }
-                    else if (owner == null /*&& IF CAN AFFORD */)
+                    else if (owner.name == "" /*&& IF CAN AFFORD */)
                     {
                         //SHOW BUY INTERFACE FOR PROPERTY
                     }

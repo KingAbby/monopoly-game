@@ -16,6 +16,7 @@ public class UIShowPanel : MonoBehaviour
         MonopolyNode.OnShowHumanPanel += ShowPanel;
         SpellsChest.OnShowHumanPanel += ShowPanel;
         PotionField.OnShowHumanPanel += ShowPanel;
+        Player.OnShowHumanPanel += ShowPanel;
     }
 
     void OnDisable()
@@ -24,6 +25,7 @@ public class UIShowPanel : MonoBehaviour
         MonopolyNode.OnShowHumanPanel -= ShowPanel;
         SpellsChest.OnShowHumanPanel -= ShowPanel;
         PotionField.OnShowHumanPanel -= ShowPanel;
+        Player.OnShowHumanPanel -= ShowPanel;
     }
 
     void ShowPanel(bool showPanel, bool enableRollDice, bool enableEndTurn)
@@ -32,5 +34,5 @@ public class UIShowPanel : MonoBehaviour
         rollDiceButton.interactable = enableRollDice;
         endTurnButton.interactable = enableEndTurn;
     }
-    
+
 }
