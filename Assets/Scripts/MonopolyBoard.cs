@@ -68,7 +68,7 @@ public class MonopolyBoard : MonoBehaviour
         }
         if (indexOfNextNodeType == -1)
         {
-            Debug.LogError("NO NODE FOUND");
+            Debug.LogError("No node of the specified type found!");
             return;
         }
         StartCoroutine(MovePlayerInSteps(nodeSearches, player));
