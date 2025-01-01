@@ -19,7 +19,7 @@ public class Player
     int money;
     MonopolyNode currentNode;
     bool isInJail;
-    int numTurnsInJail = 0;
+    int numTurnsInJail;
     [SerializeField] GameObject myToken; // CHARACTER TOKEN ON BOARD
     [SerializeField] List<MonopolyNode> myMonopolyNodes = new List<MonopolyNode>();
 

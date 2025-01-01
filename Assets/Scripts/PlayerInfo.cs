@@ -14,6 +14,7 @@ public class PlayerInfo : MonoBehaviour
     {
         playerNameText.text = newName;
     }
+
     public void SetPlayerCash(int currentCash)
     {
         playerCashText.text = "G " + currentCash;
