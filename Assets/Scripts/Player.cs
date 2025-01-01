@@ -62,16 +62,8 @@ public class Player
             CheckIfPlayerHasASet();
             //CHECK FOR UNMORTGAGE PROPERTY
             UnMortgageProperties();
-
             //CHECK IF HE COULD TRADE FOR MISING PROPERTY
-
         }
-
-        // CHECK IF CAN BUILD HOUSES
-
-        // CHECK FOR UNMORTGAGE PROPERTIES
-
-        // CHECK IF COULD TRADE FOR MISSING PROPERTIES
     }
 
     public void CollectMoney(int amount)

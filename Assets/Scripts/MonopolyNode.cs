@@ -61,6 +61,10 @@ public class MonopolyNode : MonoBehaviour
     // DRAG A CHANCE CARD
     public delegate void DrawPotionCard(Player player);
     public static DrawPotionCard OnDrawPotionCard;
+    // HUMAN INPUT PANEL
+    public delegate void ShowHumanPanel(bool activatePanel, bool activateRollDice, bool activateEndTurn);
+    public static ShowHumanPanel OnShowHumanPanel;
+    
     public Player Owner => owner;
     public void setOwner(Player newOwner)
     {
@@ -392,6 +396,7 @@ public class MonopolyNode : MonoBehaviour
         else
         {
             // SHOW UI FOR HUMAN PLAYER
+            OnShowHumanPanel.Invoke(true, GameManager.instance.RolledADouble, !GameManager.instance.RolledADouble);
         }
     }
 

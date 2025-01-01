@@ -19,6 +19,10 @@ public class SpellsChest : MonoBehaviour
     SCR_SpellsCard pickedCard;
     Player currentPlayer;
 
+    // HUMAN INPUT PANEL
+    public delegate void ShowHumanPanel(bool activatePanel, bool activateRollDice, bool activateEndTurn);
+    public static ShowHumanPanel OnShowHumanPanel;
+
     void OnEnable()
     {
         MonopolyNode.OnDrawSpellsCard += Drawcard;
@@ -165,7 +169,10 @@ public class SpellsChest : MonoBehaviour
         }
         else //HUMAN INPUT
         {
-
+            if(!isMoving)
+            {
+                OnShowHumanPanel.Invoke(true, GameManager.instance.RolledADouble, !GameManager.instance.RolledADouble);
+            }
         }
     }
 }
