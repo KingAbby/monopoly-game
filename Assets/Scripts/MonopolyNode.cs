@@ -215,7 +215,7 @@ public class MonopolyNode : MonoBehaviour
                         currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
-                        OnUpdateMessage.Invoke(currentPlayer.name + " Pays Rent of " + rentToPay + " G Coins to " + owner.name);
+                        OnUpdateMessage.Invoke(currentPlayer.name + " <color=red>Pays Rent</color> of " + rentToPay + " G Coins to " + owner.name);
                     }
                     else if (owner.name == "" && currentPlayer.CanAffordNode(price))
                     {
@@ -245,6 +245,7 @@ public class MonopolyNode : MonoBehaviour
                         currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
+                        OnUpdateMessage.Invoke(currentPlayer.name + " <color=red>Pays Rent</color> of " + rentToPay + " G Coins to " + owner.name);
                     }
                     else if (owner.name == "")
                     {
@@ -272,7 +273,7 @@ public class MonopolyNode : MonoBehaviour
                         currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
-                        OnUpdateMessage.Invoke(currentPlayer.name + " Pays Utility Rent of " + rentToPay + " G Coins to " + owner.name);
+                        OnUpdateMessage.Invoke(currentPlayer.name + " <color=red>Pays Rent</color> of " + rentToPay + " G Coins to " + owner.name);
                     }
                     else if (owner.name == "" && currentPlayer.CanAffordNode(price))
                     {
@@ -303,10 +304,11 @@ public class MonopolyNode : MonoBehaviour
                         currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
+                        OnUpdateMessage.Invoke(currentPlayer.name + " <color=red>Pays Rent</color> of " + rentToPay + " G Coins to " + owner.name);
                     }
-                    else if (owner.name == "" /*&& IF CAN AFFORD */)
+                    else if (owner.name == "")
                     {
-                        //SHOW BUY INTERFACE FOR PROPERTY
+                        //SHOW BUY INTERFACE FOR UTILITY
                         OnShowUtilityBuyPanel.Invoke(this, currentPlayer);
                     }
                     else
@@ -330,7 +332,7 @@ public class MonopolyNode : MonoBehaviour
                         currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
-                        OnUpdateMessage.Invoke(currentPlayer.name + " Pays Railroad Rent of " + rentToPay + " G Coins to " + owner.name);
+                        OnUpdateMessage.Invoke(currentPlayer.name + " <color=red> Pays Rent </color> of " + rentToPay + " G Coins to " + owner.name);
                     }
                     else if (owner.name == "" && currentPlayer.CanAffordNode(price))
                     {
@@ -361,8 +363,9 @@ public class MonopolyNode : MonoBehaviour
                         currentPlayer.PayRent(rentToPay, owner);
 
                         //SHOW MESSAGE
+                        OnUpdateMessage.Invoke(currentPlayer.name + " <color=red> Pays Rent </color> of " + rentToPay + " G Coins to " + owner.name);
                     }
-                    else if (owner.name == "" /*&& IF CAN AFFORD */)
+                    else if (owner.name == "")
                     {
                         //SHOW BUY INTERFACE FOR RAILROAD
                         OnShowRailroadBuyPanel.Invoke(this, currentPlayer);
@@ -407,15 +410,17 @@ public class MonopolyNode : MonoBehaviour
             return;
         }
 
-        //Lanjut
+        //CONTINUE GAME
         if (!playerIsHuman)
         {
             Invoke("ContinueGame", GameManager.instance.SecondsBetweenTurns);
         }
         else
         {
+            bool canEndTurn = !GameManager.instance.RolledADouble && currentPlayer.ReadMoney >= 0;
+            bool canRollDice = GameManager.instance.RolledADouble && currentPlayer.ReadMoney >= 0;
             // SHOW UI FOR HUMAN PLAYER
-            OnShowHumanPanel.Invoke(true, GameManager.instance.RolledADouble, !GameManager.instance.RolledADouble);
+            OnShowHumanPanel.Invoke(true, canRollDice, canEndTurn);
         }
     }
 
