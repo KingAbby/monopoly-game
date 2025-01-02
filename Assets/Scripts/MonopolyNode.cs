@@ -67,6 +67,12 @@ public class MonopolyNode : MonoBehaviour
     //PROPERTY BUY PANEL
     public delegate void ShowPropertyBuyPanel(MonopolyNode node, Player player);
     public static ShowPropertyBuyPanel OnShowPropertyBuyPanel;
+    //RAILROAD BUY PANEL
+    public delegate void ShowRailroadBuyPanel(MonopolyNode node, Player player);
+    public static ShowRailroadBuyPanel OnShowRailroadBuyPanel;
+    //UTILITY BUY PANEL
+    public delegate void ShowUtilityBuyPanel(MonopolyNode node, Player player);
+    public static ShowUtilityBuyPanel OnShowUtilityBuyPanel;
 
     public Player Owner => owner;
     public void setOwner(Player newOwner)
@@ -274,7 +280,7 @@ public class MonopolyNode : MonoBehaviour
                         // Debug.Log(currentPlayer.name + " Might Buy Utility");
                         OnUpdateMessage.Invoke(currentPlayer.name + " buys " + this.name);
                         currentPlayer.BuyProperty(this);
-                        // OnOwnerUpdated();
+                        OnOwnerUpdated();
 
                         //SHOW MESSAGE
                     }
@@ -301,6 +307,7 @@ public class MonopolyNode : MonoBehaviour
                     else if (owner.name == "" /*&& IF CAN AFFORD */)
                     {
                         //SHOW BUY INTERFACE FOR PROPERTY
+                        OnShowUtilityBuyPanel.Invoke(this, currentPlayer);
                     }
                     else
                     {
@@ -331,7 +338,7 @@ public class MonopolyNode : MonoBehaviour
                         // Debug.Log(currentPlayer.name + " Might Buy Railroad Facility ");
                         OnUpdateMessage.Invoke(currentPlayer.name + " buys " + this.name);
                         currentPlayer.BuyProperty(this);
-                        // OnOwnerUpdated();
+                        OnOwnerUpdated();
 
                         //SHOW MESSAGE
                     }
@@ -357,7 +364,8 @@ public class MonopolyNode : MonoBehaviour
                     }
                     else if (owner.name == "" /*&& IF CAN AFFORD */)
                     {
-                        //SHOW BUY INTERFACE FOR PROPERTY
+                        //SHOW BUY INTERFACE FOR RAILROAD
+                        OnShowRailroadBuyPanel.Invoke(this, currentPlayer);
                     }
                     else
                     {
