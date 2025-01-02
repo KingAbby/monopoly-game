@@ -599,5 +599,15 @@ public class MonopolyNode : MonoBehaviour
         // UPDATE UI
         OnOwnerUpdated();
     }
+
+    //-------------------------------TRADING SYSTEM-------------------------------------------------
+
+    //-------------------------------CHANGE NODE OWNER-------------------------------------------------
+    public void ChangeOwner(Player newOwner)
+    {
+        owner.RemoveProperty(this);
+        newOwner.AddProperty(this);
+        setOwner(newOwner);
+    }
 }
 

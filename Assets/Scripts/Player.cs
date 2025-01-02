@@ -68,6 +68,7 @@ public class Player
             //CHECK FOR UNMORTGAGE PROPERTY
             UnMortgageProperties();
             //CHECK IF HE COULD TRADE FOR MISING PROPERTY
+            TradingSystem.instance.FindMissingProperty(this);
         }
     }
 
@@ -299,11 +300,6 @@ public class Player
         GameManager.instance.RemovePlayer(this);
     }
 
-    public void RemoveProperty(MonopolyNode node)
-    {
-        myMonopolyNodes.Remove(node);
-    }
-
     //-------------------------------UNMORTGAGE PROPERTY-------------------------------
     void UnMortgageProperties()
     {
@@ -421,4 +417,22 @@ public class Player
     {
         myInfo.ActivateStaff(active);
     }
+
+    //-------------------------------TRADING SYSTEM-------------------------------------------------
+
+    //-------------------------------REMOVE AND ADD NODES-------------------------------------------------
+    public void AddProperty(MonopolyNode node)
+    {
+        myMonopolyNodes.Add(node);
+        //SORT NODES BY PRICE
+        SortPropertiesByPrice();
+    }
+
+    public void RemoveProperty(MonopolyNode node)
+    {
+        myMonopolyNodes.Remove(node);
+        //SORT NODES BY PRICE
+        SortPropertiesByPrice();
+    }
 }
+
