@@ -6,24 +6,26 @@ using TMPro;
 
 public class MessageSystem : MonoBehaviour
 {
-   [SerializeField] TMP_Text messageText;
+    [SerializeField] TMP_Text messageText;
 
-   void OnEnable()
-   {
-       ClearMessage();
-       GameManager.OnUpdateMessage += ReciveMessage;
-       Player.OnUpdateMessage += ReciveMessage;
-       MonopolyNode.OnUpdateMessage += ReciveMessage;
-   }
+    void OnEnable()
+    {
+        ClearMessage();
+        GameManager.OnUpdateMessage += RecieveMessage;
+        Player.OnUpdateMessage += RecieveMessage;
+        MonopolyNode.OnUpdateMessage += RecieveMessage;
+        TradingSystem.OnUpdateMessage += RecieveMessage;
+    }
 
     void OnDisable()
     {
-        GameManager.OnUpdateMessage -= ReciveMessage;
-        Player.OnUpdateMessage -= ReciveMessage;
-        MonopolyNode.OnUpdateMessage -= ReciveMessage;
+        GameManager.OnUpdateMessage -= RecieveMessage;
+        Player.OnUpdateMessage -= RecieveMessage;
+        MonopolyNode.OnUpdateMessage -= RecieveMessage;
+        TradingSystem.OnUpdateMessage -= RecieveMessage;
     }
 
-    void ReciveMessage(string _message)
+    void RecieveMessage(string _message)
     {
         messageText.text = _message;
     }
