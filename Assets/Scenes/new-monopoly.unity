@@ -1231,11 +1231,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 600
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 20
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -1243,7 +1243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 300
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -1255,23 +1255,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 300
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 900
+      value: 810
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 1600
+      value: 1440
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 2500
+      value: 2250
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -6462,11 +6462,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 570
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -6474,7 +6474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 285
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -6486,23 +6486,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 95
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 285
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 855
+      value: 810
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 1520
+      value: 1440
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 2375
+      value: 2250
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -7220,11 +7220,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 150
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -7232,7 +7232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 75
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -7244,23 +7244,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 75
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 225
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 400
+      value: 480
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 625
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -9121,7 +9121,7 @@ Transform:
   m_GameObject: {fileID: 576271578}
   serializedVersion: 2
   m_LocalRotation: {x: 0.60876137, y: 0, z: 0, w: 0.7933534}
-  m_LocalPosition: {x: -40, y: 87, z: 6}
+  m_LocalPosition: {x: -43, y: 87, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10316,11 +10316,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 510
+      value: 480
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -10328,7 +10328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 255
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -10340,23 +10340,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 85
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 255
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 765
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 1360
+      value: 1280
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 2125
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -10899,11 +10899,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 240
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -10911,7 +10911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 120
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -10923,23 +10923,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 40
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 120
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 360
+      value: 405
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 640
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1000
+      value: 1125
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -11507,11 +11507,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 180
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -11519,7 +11519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 90
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -11531,23 +11531,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 90
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 270
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 480
+      value: 640
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 750
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -11652,11 +11652,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 120
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -11664,7 +11664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 60
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -11676,23 +11676,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 60
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 180
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 320
+      value: 480
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 500
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -13104,11 +13104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -13116,7 +13116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -13128,23 +13128,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 90
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 160
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 250
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 924267566881010870, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -14105,6 +14105,8 @@ MonoBehaviour:
   managePanel: {fileID: 170676788}
   propertyGrid: {fileID: 1942000370}
   propertySetPrefab: {fileID: 4721713700067498143, guid: 88aa6bddc17ccc04ba70ca820e8541af, type: 3}
+  yourMoneyText: {fileID: 1729402724}
+  systemMessageText: {fileID: 1186918685}
 --- !u!1 &884350459
 GameObject:
   m_ObjectHideFlags: 0
@@ -15232,11 +15234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 90
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -15244,7 +15246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -15256,23 +15258,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 45
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 135
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 240
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 375
+      value: 625
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -16213,11 +16215,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 360
+      value: 390
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -16225,7 +16227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 180
+      value: 195
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -16237,23 +16239,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 60
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 180
+      value: 195
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 540
+      value: 585
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 960
+      value: 1040
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1500
+      value: 1625
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -17887,11 +17889,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 300
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -17899,7 +17901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 150
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -17911,23 +17913,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 50
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 150
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 450
+      value: 495
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 800
+      value: 880
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1250
+      value: 1375
       objectReference: {fileID: 0}
     - target: {fileID: 924267566881010870, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19048,7 +19050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Message Here...
+  m_text: ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19057,8 +19059,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -19081,7 +19083,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -19835,7 +19837,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1255018840}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 879064837}
+        m_TargetAssemblyTypeName: ManageUI, Assembly-CSharp
+        m_MethodName: CloseManager
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1255018840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22090,8 +22104,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -22114,7 +22128,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -23328,11 +23342,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 540
+      value: 510
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -23340,7 +23354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 270
+      value: 255
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -23352,23 +23366,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 90
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 270
+      value: 255
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 810
+      value: 765
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 1440
+      value: 1360
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 2250
+      value: 2125
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -23960,11 +23974,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 210
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -23972,7 +23986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 105
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -23984,23 +23998,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 35
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 105
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 315
+      value: 405
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 560
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 875
+      value: 1125
       objectReference: {fileID: 0}
     - target: {fileID: 924267566881010870, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24838,7 +24852,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1642232250}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 879064837}
+        m_TargetAssemblyTypeName: ManageUI, Assembly-CSharp
+        m_MethodName: AutoHandleFunds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1642232250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26445,7 +26471,7 @@ MonoBehaviour:
   m_text: 'Your Money: G 2000'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -27788,11 +27814,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 270
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -27800,7 +27826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 135
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -27812,23 +27838,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 135
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 405
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 720
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1125
+      value: 1250
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -31168,11 +31194,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 390
+      value: 420
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -31180,7 +31206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 195
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculatedRentAuto
@@ -31192,23 +31218,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 65
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[1]
-      value: 195
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[2]
-      value: 585
+      value: 630
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 1040
+      value: 1120
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 1625
+      value: 1750
       objectReference: {fileID: 0}
     - target: {fileID: 1913571717874873973, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_text
@@ -33228,11 +33254,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: price
-      value: 30
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: baseRent
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: houseCost
@@ -33244,7 +33270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: mortgageValue
-      value: 15
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: calculateRentAuto
@@ -33260,23 +33286,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[0]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
-      propertyPath: rentWithHouses.Array.data[1]
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
-      propertyPath: rentWithHouses.Array.data[2]
+      propertyPath: rentWithHouses.Array.data[1]
       value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
+      propertyPath: rentWithHouses.Array.data[2]
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[3]
-      value: 80
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 650962746444478754, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: rentWithHouses.Array.data[4]
-      value: 125
+      value: 375
       objectReference: {fileID: 0}
     - target: {fileID: 924267566881010870, guid: d11267848c783db41b32e3a7be8ec6fa, type: 3}
       propertyPath: m_AnchoredPosition.y

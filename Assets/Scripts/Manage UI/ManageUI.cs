@@ -3,13 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using TMPro;
+
 public class ManageUI : MonoBehaviour
 {
+    public static ManageUI instance;
+
     [SerializeField] GameObject managePanel; //SHOW & HIDE
     [SerializeField] Transform propertyGrid;
     [SerializeField] GameObject propertySetPrefab;
     Player playerReference;
     List<GameObject> propertyPrefabs = new List<GameObject>();
+    [SerializeField] TMP_Text yourMoneyText;
+    [SerializeField] TMP_Text systemMessageText;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -19,6 +30,29 @@ public class ManageUI : MonoBehaviour
     public void OpenManager() //CALL FROM MANAGE BUTTON
     {
         playerReference = GameManager.instance.GetCurrentPlayer;
+        CreateProperties();
+
+        managePanel.SetActive(true);
+        UpdateMoneyText();
+    }
+
+    public void CloseManager()
+    {
+        managePanel.SetActive(false);
+        ClearProperties();
+    }
+
+    void ClearProperties()
+    {
+        for (int i = propertyPrefabs.Count - 1; i >= 0; i--)
+        {
+            Destroy(propertyPrefabs[i]);
+        }
+        propertyPrefabs.Clear();
+    }
+
+    void CreateProperties()
+    {
         //GET ALL NODES AS NODE SETS
         List<MonopolyNode> processedSet = null;
 
@@ -41,16 +75,31 @@ public class ManageUI : MonoBehaviour
                 propertyPrefabs.Add(newPropertySet);
             }
         }
-        managePanel.SetActive(true);
     }
 
-    public void CloseManager()
+    public void UpdateMoneyText()
     {
-        managePanel.SetActive(false);
-        for (int i = propertyPrefabs.Count - 1; i >= 0; i--)
+        string showMoney = (playerReference.ReadMoney >= 0) ? "<color=green>G " + playerReference.ReadMoney : "<color=red>G " + playerReference.ReadMoney;
+        yourMoneyText.text = "<color=black>Your Money: </color>" + showMoney;
+    }
+
+    public void UpdateSystemMessage(string message)
+    {
+        systemMessageText.text = message;
+    }
+
+    public void AutoHandleFunds()
+    {
+        if (playerReference.ReadMoney > 0)
         {
-            Destroy(propertyPrefabs[i]);
+            UpdateSystemMessage("You don't need to do that. You have enough money!");
+            return;
         }
-        propertyPrefabs.Clear();
+        playerReference.HandleInsufficientFunds(Mathf.Abs(playerReference.ReadMoney));
+        // UPDATE THE UI
+        ClearProperties();
+        CreateProperties();
+        // UPDATE SYSTEM MESSAGE
+        UpdateMoneyText();
     }
 }

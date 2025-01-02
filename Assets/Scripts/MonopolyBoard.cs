@@ -123,7 +123,7 @@ public class MonopolyBoard : MonoBehaviour
                 Vector3 endPos = route[indexOnBoard].transform.position;
 
                 // MOVE TOKEN
-                while (MoveToNextNode(tokenToMove, endPos, 20))
+                while (MoveToNextNode(tokenToMove, endPos, 100))
                 {
                     yield return null;
                 }

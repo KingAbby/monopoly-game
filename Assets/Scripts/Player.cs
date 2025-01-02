@@ -75,6 +75,13 @@ public class Player
     {
         money += amount;
         myInfo.SetPlayerCash(money);
+        if (playerType == PlayerType.HUMAN && GameManager.instance.GetCurrentPlayer == this)
+        {
+            bool canEndTurn = !GameManager.instance.RolledADouble && ReadMoney >= 0;
+            bool canRollDice = GameManager.instance.RolledADouble && ReadMoney >= 0;
+            // SHOW UI FOR HUMAN PLAYER
+            OnShowHumanPanel.Invoke(true, canRollDice, canEndTurn);
+        }
     }
 
     internal bool CanAffordNode(int price)
@@ -96,7 +103,7 @@ public class Player
 
     void SortPropertiesByPrice()
     {
-        myMonopolyNodes.OrderBy(_node => _node.price).ToList();
+        myMonopolyNodes = myMonopolyNodes.OrderBy(_node => _node.price).ToList();
     }
 
     internal void PayRent(int rentAmount, Player owner)
@@ -131,15 +138,23 @@ public class Player
                 //HANDLE INSUFFICIENT FUNDS - AI
                 HandleInsufficientFunds(amount);
             }
-            else
-            {
-                // DISABLE HUMAN TURN AND ROLL DICE
-                OnShowHumanPanel.Invoke(true, false, false);
-            }
+            // else
+            // {
+            //     // DISABLE HUMAN TURN AND ROLL DICE
+            //     OnShowHumanPanel.Invoke(true, false, false);
+            // }
         }
         money -= amount;
         //UPDATE UI
         myInfo.SetPlayerCash(money);
+
+        if (playerType == PlayerType.HUMAN && GameManager.instance.GetCurrentPlayer == this)
+        {
+            bool canEndTurn = !GameManager.instance.RolledADouble && ReadMoney >= 0;
+            bool canRollDice = GameManager.instance.RolledADouble && ReadMoney >= 0;
+            // SHOW UI FOR HUMAN PLAYER
+            OnShowHumanPanel.Invoke(true, canRollDice, canEndTurn);
+        }
     }
 
     //---------------------------------------JAIL SECTION---------------------------------------------------
@@ -207,7 +222,7 @@ public class Player
     }
 
     //-------------------------------HANDLE INSUFFICIENT FUNDS------------------------------------------------
-    void HandleInsufficientFunds(int amountToPay)
+    public void HandleInsufficientFunds(int amountToPay)
     {
         int housesToSell = 0; //AVAILABLE HOUSES TO SELL
         int allHouses = 0;
