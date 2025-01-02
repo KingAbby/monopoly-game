@@ -22,6 +22,7 @@ public class Player
     int numTurnsInJail;
     [SerializeField] GameObject myToken; // CHARACTER TOKEN ON BOARD
     [SerializeField] List<MonopolyNode> myMonopolyNodes = new List<MonopolyNode>();
+    public List<MonopolyNode> GetMonopolyNodes => myMonopolyNodes;
 
     // PLAYER INFO
     PlayerInfo myInfo;
@@ -335,7 +336,7 @@ public class Player
         }
     }
     //-------------------------------BUILD HOUSES EVENLY ON NODE SETS-------------------------------------------------
-    void BuildHouseOrHotelEvenly(List<MonopolyNode> nodesToBuildOn)
+    internal void BuildHouseOrHotelEvenly(List<MonopolyNode> nodesToBuildOn)
     {
         int minHouses = int.MaxValue;
         int maxHouses = int.MinValue;
@@ -365,8 +366,33 @@ public class Player
             }
         }
     }
+
+    internal void SellHouseEvenly(List<MonopolyNode> nodesToSellFrom)
+    {
+        int minHouses = int.MaxValue;
+        bool houseSold = false;
+        foreach (var node in nodesToSellFrom)
+        {
+            minHouses = Mathf.Min(minHouses, node.NumberOfHouses);
+        }
+        //SELL HOUSE
+        for (int i = nodesToSellFrom.Count - 1; i >= 0; i--)
+        {
+            if (nodesToSellFrom[i].NumberOfHouses > minHouses)
+            {
+                CollectMoney(nodesToSellFrom[i].SellHouseOrHotel());
+                houseSold = true;
+                break;
+            }
+        }
+        if (!houseSold)
+        {
+            CollectMoney(nodesToSellFrom[nodesToSellFrom.Count - 1].SellHouseOrHotel());
+        }
+
+    }
     //-------------------------------CAN AFFORD & COUNT HOUSES/HOTELS-------------------------------------------------
-    bool CanAffordHouse(int price)
+    internal bool CanAffordHouse(int price)
     {
         if (playerType == PlayerType.AI)// AI
         {
