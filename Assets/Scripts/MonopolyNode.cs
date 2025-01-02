@@ -563,12 +563,13 @@ public class MonopolyNode : MonoBehaviour
 
     public int SellHouseOrHotel()
     {
-        if (monopolyNodeType == MonopolyNodeType.Property)
+        if (monopolyNodeType == MonopolyNodeType.Property && numberOfHouses > 0)
         {
             numberOfHouses--;
             VisualizeHouses();
+            return houseCost / 2; //ANY NUMBER
         }
-        return houseCost / 2; //ANY NUMBER
+        return 0;
     }
 
     public void ResetNode()
