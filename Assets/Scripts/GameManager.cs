@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     public bool RolledADouble => rolledADouble;
     public void ResetRolledADouble() => rolledADouble = false;
     int doubleRollCount;
+    bool hasRolledDice;
+    public bool HasRolledDice => hasRolledDice;
     //TAX POOL
     int taxPool = 0;
 
@@ -100,6 +102,7 @@ public class GameManager : MonoBehaviour
     public void RollDice()
     {
         bool allowedToMove = true;
+        hasRolledDice = true;
         // RESET LAST ROLL
         rolledDice = new int[2];
 
@@ -215,6 +218,8 @@ public class GameManager : MonoBehaviour
     public void SwitchPlayer()
     {
         currentPlayer++;
+        //RESET DICE HAS ROLLED
+        hasRolledDice = false;
 
         // ROLL DOUBLE?
         doubleRollCount = 0;
