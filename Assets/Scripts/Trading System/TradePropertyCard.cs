@@ -22,19 +22,19 @@ public class TradePropertyCard : MonoBehaviour
         nodeReference = node;
         colorField.color = (node.propertyColorField != null) ? node.propertyColorField.color : Color.black;
         propertyNameText.text = node.name;
-        switch(node.monopolyNodeType)
+        switch (node.monopolyNodeType)
         {
             case MonopolyNodeType.Property:
                 typeImage.sprite = houseSprite;
-                typeImage.color = Color.blue;
+                typeImage.color = Color.white;
                 break;
             case MonopolyNodeType.Railroad:
                 typeImage.sprite = railroadSprite;
-                typeImage.color = Color.green;
+                typeImage.color = Color.white;
                 break;
             case MonopolyNodeType.Utility:
                 typeImage.sprite = utilitySprite;
-                typeImage.color = Color.black;
+                typeImage.color = Color.white;
                 break;
         }
         mortgageImage.SetActive(node.IsMortgaged);

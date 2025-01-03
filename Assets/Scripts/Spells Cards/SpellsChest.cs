@@ -158,18 +158,14 @@ public class SpellsChest : MonoBehaviour
     {
         if (currentPlayer.playerType == Player.PlayerType.AI)
         {
-            if (!isMoving && GameManager.instance.RolledADouble)
+            if (!isMoving)
             {
-                GameManager.instance.RollDice();
-            }
-            else if (!isMoving && !GameManager.instance.RolledADouble)
-            {
-                GameManager.instance.SwitchPlayer();
+                GameManager.instance.Continue();
             }
         }
         else //HUMAN INPUT
         {
-            if(!isMoving)
+            if (!isMoving)
             {
                 OnShowHumanPanel.Invoke(true, GameManager.instance.RolledADouble, !GameManager.instance.RolledADouble);
             }
