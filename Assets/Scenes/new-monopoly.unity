@@ -605,12 +605,12 @@ MonoBehaviour:
   leftMoneySlider: {fileID: 1710682913}
   buttonGrid: {fileID: 639627128}
   playerButtonPrefab: {fileID: 4110825067349123205, guid: 2273b547c4bfcfd4fa89f7e8a9f5f6ea, type: 3}
-  rightOffererNameText: {fileID: 0}
-  rightCardGrid: {fileID: 0}
-  rightToggleGroup: {fileID: 0}
-  rightYourMoneyText: {fileID: 0}
-  rightOfferMoney: {fileID: 0}
-  rightMoneySlider: {fileID: 0}
+  rightOffererNameText: {fileID: 1261040320}
+  rightCardGrid: {fileID: 1602372445}
+  rightToggleGroup: {fileID: 647222049}
+  rightYourMoneyText: {fileID: 735558660}
+  rightOfferMoney: {fileID: 830014295}
+  rightMoneySlider: {fileID: 1023491438}
 --- !u!4 &38530004
 Transform:
   m_ObjectHideFlags: 0
@@ -12889,7 +12889,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Your Money: G 4000'
+  m_text: 'Your Money: G 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14797,7 +14797,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Offer Money: '
+  m_text: 'Requested Money: G 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17907,7 +17907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.016520834, y: 0.026851848}
   m_AnchorMax: {x: 0.9915209, y: 0.87214816}
-  m_AnchoredPosition: {x: -7.59375, y: -2.1140137}
+  m_AnchoredPosition: {x: -7.59375, y: -2.1140442}
   m_SizeDelta: {x: -14.253, y: -4.2279}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964589446
@@ -19226,7 +19226,6 @@ GameObject:
   - component: {fileID: 1023491436}
   - component: {fileID: 1023491438}
   - component: {fileID: 1023491437}
-  - component: {fileID: 1023491439}
   m_Layer: 5
   m_Name: Money Slider
   m_TagString: Untagged
@@ -19339,34 +19338,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1023491439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023491435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbdff61756e8ae745a8e7c229eb75b9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 382125073941382151, guid: b1c1616869c1d2f48920ddf5cc53a30c, type: 3}
-  tradePanel: {fileID: 1471024585}
-  leftOffererNameText: {fileID: 1986175958}
-  leftCardGrid: {fileID: 588168624}
-  leftToggleGroup: {fileID: 1201677583}
-  leftYourMoneyText: {fileID: 915909972}
-  leftOfferMoney: {fileID: 671845328}
-  leftMoneySlider: {fileID: 1710682913}
-  buttonGrid: {fileID: 0}
-  playerButtonPrefab: {fileID: 0}
-  rightOffererNameText: {fileID: 0}
-  rightCardGrid: {fileID: 0}
-  rightToggleGroup: {fileID: 0}
-  rightYourMoneyText: {fileID: 0}
-  rightOfferMoney: {fileID: 0}
-  rightMoneySlider: {fileID: 0}
 --- !u!1 &1030403999
 GameObject:
   m_ObjectHideFlags: 0
@@ -22334,7 +22305,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1181510996}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38530003}
+        m_TargetAssemblyTypeName: TradingSystem, Assembly-CSharp
+        m_MethodName: MakeOfferButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1181510996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29259,7 +29242,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71.75
+  m_fontSize: 71.7
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
