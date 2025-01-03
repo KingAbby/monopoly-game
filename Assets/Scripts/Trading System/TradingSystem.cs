@@ -5,6 +5,7 @@ using UnityEngine;
 using System.Linq;
 using TMPro;
 using UnityEngine.UI;
+using System.Xml.Serialization;
 
 public class TradingSystem : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class TradingSystem : MonoBehaviour
 
     [SerializeField] GameObject cardPrefab;
     [SerializeField] GameObject tradePanel;
+    [SerializeField] GameObject resultPanel;
+    [SerializeField] TMP_Text resultMessageText;
     [Header("LEFT SIDE PANEL")]
     [SerializeField] TMP_Text leftOffererNameText;
     [SerializeField] Transform leftCardGrid;
@@ -52,6 +55,7 @@ public class TradingSystem : MonoBehaviour
     void Start()
     {
         tradePanel.SetActive(false);
+        resultPanel.SetActive(false);
     }
 
     //-------------------------------FIND MISSING PROPERTIES IN SET-------------------------------------------------AI
@@ -165,14 +169,9 @@ public class TradingSystem : MonoBehaviour
     void ConsiderTradeOffer(Player currentPlayer, Player nodeOwner, MonopolyNode requestedNode, MonopolyNode offeredNode, int offeredMoney, int requestedMoney)
     {
         int valueOfTheTrade = (CalculateValueOfNode(requestedNode) + requestedMoney) - (CalculateValueOfNode(offeredNode) + offeredMoney);
-        // 300 - 600(-300)+0 - 300 = -600
-        // (300 + req300) - (600 + 0) = 0
-        // (600 + req0) - (300 + offer300)
-        // WANT         // GIVE
-        // 200 + 200    > 200 + 100
 
         //  SELL A NODE FOR MONEY ONLY
-        if (requestedNode == null && offeredNode != null && requestedMoney <= nodeOwner.ReadMoney / 3)
+        if (requestedNode == null && offeredNode != null && requestedMoney <= nodeOwner.ReadMoney / 3 && !MonopolyBoard.Instance.PlayerHasAllNodesOfSet(requestedNode).allSame)
         {
             // TRADE THE NODE IS VALID
             Trade(currentPlayer, nodeOwner, requestedNode, offeredNode, offeredMoney, requestedMoney);
@@ -180,13 +179,15 @@ public class TradingSystem : MonoBehaviour
         }
 
         // NORMAL TRADE
-        if (valueOfTheTrade <= 0)
+        if (valueOfTheTrade <= 0 && !MonopolyBoard.Instance.PlayerHasAllNodesOfSet(requestedNode).allSame)
         {
             // TRADE THE NODE IS VALID
             Trade(currentPlayer, nodeOwner, requestedNode, offeredNode, offeredMoney, requestedMoney);
+            TradeResult(true);
         }
         else
         {
+            TradeResult(false);
             // DEBUG LINE OR TELL PLAYE THATS REJECTED
             Debug.Log("AI REJECTED TRADE OFFER");
         }
@@ -239,6 +240,9 @@ public class TradingSystem : MonoBehaviour
             // SHOW A MESSAGE FOR THE UI
             OnUpdateMessage.Invoke(currentPlayer.name + " sold " + offeredNode.name + " To " + nodeOwner.name + " for " + requestedMoney + " G ");
         }
+
+        //HIDE UI FOR HUMAN
+        CloseTradePanel();
     }
 
     //-------------------------------USER INTERFACE CONTENT-------------------------------------------------HUMAN
@@ -394,7 +398,7 @@ public class TradingSystem : MonoBehaviour
         MonopolyNode requestedNode = null;
         MonopolyNode offeredNode = null;
 
-        if(rightPlayerReference == null)
+        if (rightPlayerReference == null)
         {
             // ERROR MESSAGE
 
@@ -414,5 +418,21 @@ public class TradingSystem : MonoBehaviour
         }
 
         MakeTradeOffer(leftPlayerReference, rightPlayerReference, requestedNode, offeredNode, (int)leftMoneySlider.value, (int)rightMoneySlider.value);
+    }
+
+    //------------------------------------TRADE SUMMARY-----------------------------------------
+
+    void TradeResult(bool accepted)
+    {
+        if (accepted)
+        {
+            resultMessageText.text = rightPlayerReference.name + "<b><color=blue> Accepted </color=blue></b>" + "The Trade Offer";
+        }
+        else
+        {
+            resultMessageText.text = rightPlayerReference.name + "<b><color=red> Rejected </color=red></b>" + "The Trade Offer";
+        }
+
+        resultPanel.SetActive(true);
     }
 }
