@@ -24,6 +24,11 @@ public class Player
     [SerializeField] List<MonopolyNode> myMonopolyNodes = new List<MonopolyNode>();
     public List<MonopolyNode> GetMonopolyNodes => myMonopolyNodes;
 
+    bool hasChanceJailFreeCard, hasCommunityJailFreeCard;
+
+    public bool HasChanceJailFreeCard => hasChanceJailFreeCard;
+    public bool HasCommunityJailFreeCard => hasCommunityJailFreeCard;
+
     // PLAYER INFO
     PlayerInfo myInfo;
 
@@ -49,7 +54,7 @@ public class Player
     public static UpdateMessage OnUpdateMessage;
 
     // HUMAN INPUT PANEL
-    public delegate void ShowHumanPanel(bool activatePanel, bool activateRollDice, bool activateEndTurn);
+    public delegate void ShowHumanPanel(bool activatePanel, bool activateRollDice, bool activateEndTurn, bool hasChanceJailCard, bool hasCommunityJailCard);
     public static ShowHumanPanel OnShowHumanPanel;
 
     public void Initialize(MonopolyNode startNode, int startMoney, PlayerInfo info, GameObject token)
@@ -89,7 +94,7 @@ public class Player
             bool canEndTurn = !GameManager.instance.RolledADouble && ReadMoney >= 0 && GameManager.instance.HasRolledDice;
             bool canRollDice = (GameManager.instance.RolledADouble && ReadMoney >= 0) || (!GameManager.instance.HasRolledDice && ReadMoney >= 0);
             // SHOW UI FOR HUMAN PLAYER
-            OnShowHumanPanel.Invoke(true, canRollDice, canEndTurn);
+            OnShowHumanPanel.Invoke(true, canRollDice, canEndTurn, hasChanceJailFreeCard, hasCommunityJailFreeCard);
         }
     }
 
@@ -128,7 +133,7 @@ public class Player
             else
             {
                 // DISABLE HUMAN TURN AND ROLL DICE
-                OnShowHumanPanel.Invoke(true, false, false);
+                OnShowHumanPanel.Invoke(true, false, false, hasChanceJailFreeCard, hasCommunityJailFreeCard);
             }
         }
         money -= rentAmount;
@@ -162,7 +167,7 @@ public class Player
             bool canEndTurn = !GameManager.instance.RolledADouble && ReadMoney >= 0 && GameManager.instance.HasRolledDice;
             bool canRollDice = (GameManager.instance.RolledADouble && ReadMoney >= 0) || (!GameManager.instance.HasRolledDice && ReadMoney >= 0);
             // SHOW UI FOR HUMAN PLAYER
-            OnShowHumanPanel.Invoke(true, canRollDice, canEndTurn);
+            OnShowHumanPanel.Invoke(true, canRollDice, canEndTurn, hasChanceJailFreeCard, hasCommunityJailFreeCard);
         }
     }
 
@@ -286,13 +291,17 @@ public class Player
                 }
             }
         }
-        //GO BANKRUPT IF REACH THIS POINT
-        Bankrupt();
+        if(playerType == PlayerType.AI)
+        {
+            //GO BANKRUPT IF REACH THIS POINT
+            Bankrupt();
+        }
+        
 
     }
 
     //-------------------------------BANKRUPT/GAMEOVER------------------------------------------------
-    void Bankrupt()
+    internal void Bankrupt()
     {
         //TAKE OUT PLAYER OF THE GAME
 
@@ -302,6 +311,15 @@ public class Player
         for (int i = myMonopolyNodes.Count - 1; i >= 0; i--)
         {
             myMonopolyNodes[i].ResetNode();
+        }
+        if(hasChanceJailFreeCard)
+        {
+            SpellsChest.instance.AddBackJailFreeCard();
+        }
+
+        if(hasCommunityJailFreeCard)
+        {
+            PotionField.instance.AddBackJailFreeCard();
         }
 
         //REMOVE THE PLAYER FROM THE GAME
@@ -469,5 +487,39 @@ public class Player
                 break;
         }
     }
+
+    public void AddChanceJailFreeCard()
+    {
+        hasChanceJailFreeCard = true;
+    }
+
+    public void AddCommunityJailFreeCard()
+    {
+        hasCommunityJailFreeCard = true;
+    }
+
+    public void UseCommunityJailFreeCard() // Jail2
+    {
+        if(!IsInJail)
+        {
+            return;
+        }
+        GetOutOfJail();
+        hasCommunityJailFreeCard = false;
+        SpellsChest.instance.AddBackJailFreeCard();
+        OnUpdateMessage.Invoke(name + " used a <color=green>Jail Free Card</color>");
+    } 
+
+    public void UseChanceJailFreeCard() // Jail 1
+    {
+        if(!IsInJail)
+        {
+            return;
+        }
+        GetOutOfJail();
+        hasChanceJailFreeCard = false;
+        PotionField.instance.AddBackJailFreeCard();
+        OnUpdateMessage.Invoke(name + " used a <color=green>Jail Free Card</color>");
+    } 
 }
 

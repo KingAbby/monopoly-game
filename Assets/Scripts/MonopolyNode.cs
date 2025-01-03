@@ -62,7 +62,7 @@ public class MonopolyNode : MonoBehaviour
     public delegate void DrawPotionCard(Player player);
     public static DrawPotionCard OnDrawPotionCard;
     // HUMAN INPUT PANEL
-    public delegate void ShowHumanPanel(bool activatePanel, bool activateRollDice, bool activateEndTurn);
+    public delegate void ShowHumanPanel(bool activatePanel, bool activateRollDice, bool activateEndTurn, bool hasChanceJailCard, bool hasCommunityJailCard);
     public static ShowHumanPanel OnShowHumanPanel;
     //PROPERTY BUY PANEL
     public delegate void ShowPropertyBuyPanel(MonopolyNode node, Player player);
@@ -421,7 +421,9 @@ public class MonopolyNode : MonoBehaviour
             bool canEndTurn = !GameManager.instance.RolledADouble && currentPlayer.ReadMoney >= 0;
             bool canRollDice = GameManager.instance.RolledADouble && currentPlayer.ReadMoney >= 0;
             // SHOW UI FOR HUMAN PLAYER
-            OnShowHumanPanel.Invoke(true, canRollDice, canEndTurn);
+            bool jail1 = currentPlayer.HasChanceJailFreeCard;
+            bool jail2 = currentPlayer.HasCommunityJailFreeCard;
+            OnShowHumanPanel.Invoke(true, canRollDice, canEndTurn, jail1, jail2);
         }
     }
 

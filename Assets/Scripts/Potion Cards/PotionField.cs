@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class PotionField : MonoBehaviour
 {
+    public static PotionField instance;
     [SerializeField] List<SCR_PotionCard> cards = new List<SCR_PotionCard>();
     [SerializeField] TMP_Text cardText;
     [SerializeField] GameObject cardHolderBackground;
@@ -16,12 +17,13 @@ public class PotionField : MonoBehaviour
     List<SCR_PotionCard> cardPool = new List<SCR_PotionCard>();
     List<SCR_PotionCard> usedCardPool = new List<SCR_PotionCard>();
 
+    SCR_PotionCard jailFreeCard;
     //CURRENT CARD & PLAYER
     SCR_PotionCard pickedCard;
     Player currentPlayer;
 
     // HUMAN INPUT PANEL
-    public delegate void ShowHumanPanel(bool activatePanel, bool activateRollDice, bool activateEndTurn);
+    public delegate void ShowHumanPanel(bool activatePanel, bool activateRollDice, bool activateEndTurn, bool hasChanceJailCard, bool hasCommunityJailCard);
     public static ShowHumanPanel OnShowHumanPanel;
 
     void OnEnable()
@@ -32,6 +34,11 @@ public class PotionField : MonoBehaviour
     void OnDisable()
     {
         MonopolyNode.OnDrawPotionCard -= Drawcard;
+    }
+
+    void Awake()
+    {
+        instance = this;
     }
 
     void Start()
@@ -59,7 +66,18 @@ public class PotionField : MonoBehaviour
         //DRAW CARD
         pickedCard = cardPool[0];
         cardPool.RemoveAt(0);
-        usedCardPool.Add(pickedCard);
+
+        if(pickedCard.jailFreeCard)
+        {
+            jailFreeCard = pickedCard;
+        }   
+        else
+        {
+            usedCardPool.Add(pickedCard);
+        }    
+        
+
+
         if (cardPool.Count == 0)
         {
             //PUT BACK ALL CARDS
@@ -150,7 +168,7 @@ public class PotionField : MonoBehaviour
         }
         else if (pickedCard.jailFreeCard) //JAIL FREE CARD
         {
-
+            currentPlayer.AddChanceJailFreeCard();
         }
         else if (pickedCard.moveStepsBackwards != 0)
         {
@@ -184,8 +202,16 @@ public class PotionField : MonoBehaviour
         {
             if (!isMoving)
             {
-                OnShowHumanPanel.Invoke(true, GameManager.instance.RolledADouble, !GameManager.instance.RolledADouble);
+                bool jail1 = currentPlayer.HasChanceJailFreeCard;
+                bool jail2 = currentPlayer.HasCommunityJailFreeCard;
+                OnShowHumanPanel.Invoke(true, GameManager.instance.RolledADouble, !GameManager.instance.RolledADouble, jail1, jail2);
             }
         }
+    }
+
+    public void AddBackJailFreeCard()
+    {
+        usedCardPool.Add(jailFreeCard);
+        jailFreeCard = null;
     }
 }
