@@ -248,11 +248,13 @@ public class TradingSystem : MonoBehaviour
     {
         leftOffererNameText.text = leftPlayerReference.name;
 
-        for (int i = 0; i < leftPlayerReference.GetMonopolyNodes.Count; i++)
+        List<MonopolyNode> referenceNodes = leftPlayerReference.GetMonopolyNodes;
+        for (int i = 0; i < referenceNodes.Count; i++)
         {
             GameObject tradeCard = Instantiate(cardPrefab, leftCardGrid, false);
-
             // SET UP THE ACTUAL CARD CONTENT
+            tradeCard.GetComponent<TradePropertyCard>().SetTradeCard(referenceNodes[i], leftToggleGroup);
+
             leftCardPrefabList.Add(tradeCard);
         }
         leftYourMoneyText.text = "Your Money: G " + leftPlayerReference.ReadMoney;
@@ -273,11 +275,14 @@ public class TradingSystem : MonoBehaviour
     public void CloseTradePanel()
     {
         tradePanel.SetActive(false);
+
+        ClearAll();
     }
 
     public void OpenTradePanel()
     {
         leftPlayerReference = GameManager.instance.GetCurrentPlayer;
+        rightOffererNameText.text = "Select Player";
         CreateLeftPanel();
         CreateMiddleButtons();
     }
@@ -286,10 +291,26 @@ public class TradingSystem : MonoBehaviour
 
     public void ShowRightPlayer(Player player)
     {
+        rightPlayerReference = player;
         // RESET THE CURRENT CONTENT
-
+        ClearRightPanel();
         // SHOW RIGHT PLAYER OF ABOVE PLAYER
+        rightOffererNameText.text = rightPlayerReference.name;
 
+        List<MonopolyNode> referenceNodes = rightPlayerReference.GetMonopolyNodes;
+        for (int i = 0; i < referenceNodes.Count; i++)
+        {
+            GameObject tradeCard = Instantiate(cardPrefab, rightCardGrid, false);
+            // SET UP THE ACTUAL CARD CONTENT
+            tradeCard.GetComponent<TradePropertyCard>().SetTradeCard(referenceNodes[i], rightToggleGroup);
+
+            rightCardPrefabList.Add(tradeCard);
+        }
+        rightYourMoneyText.text = "Your Money: G " + rightPlayerReference.ReadMoney;
+        // SET UP MONEY SLIDER AND TEXT
+        rightMoneySlider.maxValue = rightPlayerReference.ReadMoney;
+        rightMoneySlider.value = 0;
+        UpdateRightSlider(rightMoneySlider.value);
 
         // UPDATE THE MONEY AND THE SLIDER
     }
@@ -317,5 +338,81 @@ public class TradingSystem : MonoBehaviour
 
             playerButtonList.Add(newPlayerButton);
         }
+    }
+
+    void ClearAll() // IF WE OPEN OR CLOSE THE PANEL
+    {
+        rightOffererNameText.text = "Select Player";
+        rightYourMoneyText.text = "Your Money: G 0";
+        rightMoneySlider.maxValue = 0;
+        rightMoneySlider.value = 0;
+        UpdateRightSlider(rightMoneySlider.value);
+
+        // CLEAR MIDDLE BUTTONS
+        for (int i = playerButtonList.Count - 1; i >= 0; i--)
+        {
+            Destroy(playerButtonList[i]);
+        }
+        playerButtonList.Clear();
+
+        // CLEAR LEFT CARD CONTENT
+        for (int i = leftCardPrefabList.Count - 1; i >= 0; i--)
+        {
+            Destroy(leftCardPrefabList[i]);
+        }
+        leftCardPrefabList.Clear();
+
+        // CLEAR RIGHT CARD CONTENT
+        for (int i = rightCardPrefabList.Count - 1; i >= 0; i--)
+        {
+            Destroy(rightCardPrefabList[i]);
+        }
+        rightCardPrefabList.Clear();
+    }
+
+    void ClearRightPanel()
+    {
+        for (int i = rightCardPrefabList.Count - 1; i >= 0; i--)
+        {
+            Destroy(rightCardPrefabList[i]);
+        }
+        rightCardPrefabList.Clear();
+        // RESET THE SLIDER
+        // SET UP MONEY SLIDER AND TEXT
+        rightMoneySlider.maxValue = 0;
+        rightMoneySlider.value = 0;
+        UpdateRightSlider(rightMoneySlider.value);
+    }
+
+    public void UpdateRightSlider(float value)
+    {
+        rightOfferMoney.text = "Requested Money: G " + rightMoneySlider.value;
+    }
+
+    public void MakeOfferButton() // HUMAN INPUT BUTTON
+    {
+        MonopolyNode requestedNode = null;
+        MonopolyNode offeredNode = null;
+
+        if(rightPlayerReference == null)
+        {
+            // ERROR MESSAGE
+
+            return;
+        }
+
+        Toggle offeredToggle = leftToggleGroup.ActiveToggles().FirstOrDefault();
+        if (offeredToggle != null)
+        {
+            offeredNode = offeredToggle.GetComponentInParent<TradePropertyCard>().Node();
+        }
+
+        Toggle requestedToggle = rightToggleGroup.ActiveToggles().FirstOrDefault();
+        if (requestedToggle != null)
+        {
+            requestedNode = requestedToggle.GetComponentInParent<TradePropertyCard>().Node();
+        }
+
+        MakeTradeOffer(leftPlayerReference, rightPlayerReference, requestedNode, offeredNode, (int)leftMoneySlider.value, (int)rightMoneySlider.value);
     }
 }
