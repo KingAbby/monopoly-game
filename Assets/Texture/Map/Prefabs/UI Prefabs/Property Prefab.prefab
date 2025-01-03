@@ -543,9 +543,9 @@ RectTransform:
   - {fileID: 2059145117742491636}
   m_Father: {fileID: 1609135834435572360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 996.3049, y: -184}
   m_SizeDelta: {x: 240, y: 347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5433066157646573553
@@ -623,7 +623,6 @@ GameObject:
   - component: {fileID: 1609135834435572360}
   - component: {fileID: 8664543733321650598}
   - component: {fileID: 6159096220243717972}
-  - component: {fileID: 4937256618722010603}
   - component: {fileID: 8229434932075424549}
   - component: {fileID: 3222359676705528868}
   m_Layer: 5
@@ -692,32 +691,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4937256618722010603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721713700067498143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 10
-    m_Right: 10
-    m_Top: 10
-    m_Bottom: 10
-  m_ChildAlignment: 4
-  m_Spacing: 10
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!114 &8229434932075424549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,6 +729,7 @@ MonoBehaviour:
   sellHouseButton: {fileID: 5310522962609809936}
   buyHousePriceText: {fileID: 2019259281908850082}
   sellHousePriceText: {fileID: 1303812100867741618}
+  buttonBox: {fileID: 4141342487510262851}
 --- !u!1 &5020218636171342691
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,10 +763,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1609135834435572360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 805.2195, y: 350}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 570, y: -184}
+  m_SizeDelta: {x: 1092.6, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7393965304475681055
 CanvasRenderer:
