@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [Header("Global Game Settings")]
     [SerializeField] int maxTurnsInJail = 3; // 3 turns in jail
     [SerializeField] int startMoney = 2000;
-    [SerializeField] int goMoney = 200;
+    [SerializeField] int goMoney = 300;
     [SerializeField] float secondsBetweenTurns = 3;
 
     [Header("Player Info")]
@@ -174,9 +174,7 @@ public class GameManager : MonoBehaviour
         }
 
         // CAN WE LEAVE JAIL
-
         // MOVE IF ALLOWED
-
         if (allowedToMove)
         {
             OnUpdateMessage.Invoke(playerList[currentPlayer].name + " rolled a " + rolledDice[0] + " & " + rolledDice[1] + "!");
@@ -288,6 +286,28 @@ public class GameManager : MonoBehaviour
         foreach (var player in playerList)
         {
             player.ActivateSelector(false);
+        }
+    }
+
+    //--------------------------------CONTINUE GAME STUFF----------------------------------------------------------------
+
+    public void Continue()
+    {
+        Invoke("ContinueGame", SecondsBetweenTurns);
+    }
+
+    void ContinueGame()
+    {
+        // IF THE LAST ROLL WAS A DOUBLE
+        if (RolledADouble)
+        {
+            // ROLL THE DICE AGAIN
+            RollDice();
+        }
+        else
+        {
+            // NOT A DOUBLE ROLL - SWITCH PLAYER
+            SwitchPlayer();
         }
     }
 }

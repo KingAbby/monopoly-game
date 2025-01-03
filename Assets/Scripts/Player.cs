@@ -30,6 +30,14 @@ public class Player
     // AI
     int aiMoneySavity = 500;
 
+    // AI STATES
+    public enum AIStates
+    {
+        IDLE,
+        TRADING,
+    }
+    public AIStates aiState;
+
     // RETURN SOME INFOS
     public bool IsInJail => isInJail;
     public GameObject MyToken => myToken;
@@ -68,7 +76,7 @@ public class Player
             //CHECK FOR UNMORTGAGE PROPERTY
             UnMortgageProperties();
             //CHECK IF HE COULD TRADE FOR MISING PROPERTY
-            TradingSystem.instance.FindMissingProperty(this);
+            // TradingSystem.instance.FindMissingProperty(this);
         }
     }
 
@@ -433,6 +441,33 @@ public class Player
         myMonopolyNodes.Remove(node);
         //SORT NODES BY PRICE
         SortPropertiesByPrice();
+    }
+
+    //-------------------------------REMOVE AND ADD NODES-------------------------------------------------
+    public void ChangeState(AIStates state)
+    {
+        if (playerType == PlayerType.HUMAN)
+        {
+            return;
+        }
+
+        aiState = state;
+        switch (aiState)
+        {
+            case AIStates.IDLE:
+                {
+                    // CONTINUE THE GAME
+                    // ContinueGame();
+                    GameManager.instance.Continue();
+                }
+                break;
+            case AIStates.TRADING:
+                {
+                    // HOLD THE GAME UNTIL IT FINISHES TRADING
+                    TradingSystem.instance.FindMissingProperty(this);
+                }
+                break;
+        }
     }
 }
 

@@ -152,18 +152,18 @@ public class PotionField : MonoBehaviour
         {
 
         }
-        else if(pickedCard.moveStepsBackwards != 0)
+        else if (pickedCard.moveStepsBackwards != 0)
         {
             int steps = Mathf.Abs(pickedCard.moveStepsBackwards);
             MonopolyBoard.Instance.MovePlayerToken(-steps, currentPlayer);
             isMoving = true;
         }
-        else if(pickedCard.nextRailRoad)
+        else if (pickedCard.nextRailRoad)
         {
             MonopolyBoard.Instance.MovePlayerToken(MonopolyNodeType.Railroad, currentPlayer);
             isMoving = true;
         }
-        else if(pickedCard.nextUtility)
+        else if (pickedCard.nextUtility)
         {
             MonopolyBoard.Instance.MovePlayerToken(MonopolyNodeType.Utility, currentPlayer);
             isMoving = true;
@@ -175,18 +175,14 @@ public class PotionField : MonoBehaviour
     {
         if (currentPlayer.playerType == Player.PlayerType.AI)
         {
-            if (!isMoving && GameManager.instance.RolledADouble)
+            if (!isMoving)
             {
-                GameManager.instance.RollDice();
-            }
-            else if (!isMoving && !GameManager.instance.RolledADouble)
-            {
-                GameManager.instance.SwitchPlayer();
+                GameManager.instance.Continue();
             }
         }
         else //HUMAN INPUT
         {
-            if(!isMoving)
+            if (!isMoving)
             {
                 OnShowHumanPanel.Invoke(true, GameManager.instance.RolledADouble, !GameManager.instance.RolledADouble);
             }
