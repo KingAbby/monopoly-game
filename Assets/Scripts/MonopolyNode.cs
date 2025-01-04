@@ -414,7 +414,7 @@ public class MonopolyNode : MonoBehaviour
         if (!playerIsHuman)
         {
             // Invoke("ContinueGame", GameManager.instance.SecondsBetweenTurns);
-            currentPlayer.ChangeState(Player.AIStates.TRADING);
+            currentPlayer.ChangeState(Player.AiStates.TRADING);
         }
         else
         {
@@ -480,7 +480,7 @@ public class MonopolyNode : MonoBehaviour
 
     int CalculateUtilityRent()
     {
-        int[] lastRolledDice = GameManager.instance.LastRolledDice;
+        List<int> lastRolledDice = GameManager.instance.LastRolledDice;
 
         int result = 0;
         var (list, allSame) = MonopolyBoard.Instance.PlayerHasAllNodesOfSet(this);

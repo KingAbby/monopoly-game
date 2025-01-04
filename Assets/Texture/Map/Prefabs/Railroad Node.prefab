@@ -176,6 +176,7 @@ MonoBehaviour:
     name: 
     myToken: {fileID: 0}
     myMonopolyNodes: []
+    aiState: 0
 --- !u!1 &1786228856208981267
 GameObject:
   m_ObjectHideFlags: 0

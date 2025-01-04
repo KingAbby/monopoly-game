@@ -22,19 +22,24 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject playerInfoPrefab;
     [SerializeField] Transform playerPanel; // Panel to hold player info
     [SerializeField] List<GameObject> playerTokenList = new List<GameObject>();
+
     [Header("Game Over/ Win Info")]
     [SerializeField] GameObject gameOverPanel;
     [SerializeField] TMP_Text winnerNameText;
 
+    [Header("Dice")]
+    [SerializeField] Dice _dice1;
+    [SerializeField] Dice _dice2;
 
     // ABOUT THE ROLLING DICE
-    int[] rolledDice;
+    List<int> rolledDice = new List<int>();
     bool rolledADouble;
     public bool RolledADouble => rolledADouble;
     public void ResetRolledADouble() => rolledADouble = false;
     int doubleRollCount;
     bool hasRolledDice;
     public bool HasRolledDice => hasRolledDice;
+
     //TAX POOL
     int taxPool = 0;
 
@@ -53,10 +58,10 @@ public class GameManager : MonoBehaviour
     public static ShowHumanPanel OnShowHumanPanel;
 
     //DEBUG
-    [SerializeField] bool alwaysDoubleRoll = false;
-    [SerializeField] bool forceDiceRolls;
-    [SerializeField] int dice1;
-    [SerializeField] int dice2;
+    // [SerializeField] bool alwaysDoubleRoll = false;
+    // [SerializeField] bool forceDiceRolls;
+    // [SerializeField] int dice1;
+    // [SerializeField] int dice2;
 
     void Awake()
     {
@@ -68,9 +73,11 @@ public class GameManager : MonoBehaviour
         currentPlayer = Random.Range(0, playerList.Count);
         gameOverPanel.SetActive(false);
         Initialize();
+        CameraSwitcher.instance.SwitchToTopDown();
         if (playerList[currentPlayer].playerType == Player.PlayerType.AI)
         {
-            RollDice();
+            // RollDice();
+            RollPhysicalDice();
         }
         else
         {
@@ -111,44 +118,73 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // PRESS BUTTON FROM HUMAN - OR AUTO FROM AI
-    public void RollDice()
+    public void RollPhysicalDice()
     {
-        bool allowedToMove = true;
-        hasRolledDice = true;
+        CheckForJailFree();
+        rolledDice.Clear();
+        _dice1.RollDice();
+        _dice2.RollDice();
+        CameraSwitcher.instance.SwitchToDice();
 
-        if(playerList[currentPlayer].IsInJail && playerList[currentPlayer].playerType == Player.PlayerType.AI)
+        // SHOW OR HIDE UI
+        if (playerList[currentPlayer].playerType == Player.PlayerType.HUMAN)
         {
-            if(playerList[currentPlayer].HasChanceJailFreeCard)
+            bool jail1 = playerList[currentPlayer].HasChanceJailFreeCard;
+            bool jail2 = playerList[currentPlayer].HasCommunityJailFreeCard;
+            OnShowHumanPanel.Invoke(true, false, false, jail1, jail2);
+        }
+    }
+
+    void CheckForJailFree()
+    {
+        // JAIL FREE CARD
+        if (playerList[currentPlayer].IsInJail && playerList[currentPlayer].playerType == Player.PlayerType.AI)
+        {
+            if (playerList[currentPlayer].HasChanceJailFreeCard)
             {
                 playerList[currentPlayer].UseChanceJailFreeCard();
             }
-            else if(playerList[currentPlayer].HasCommunityJailFreeCard)
+            else if (playerList[currentPlayer].HasCommunityJailFreeCard)
             {
                 playerList[currentPlayer].UseCommunityJailFreeCard();
             }
         }
+    }
 
+    public void ReportDiceRolled(int diceValue)
+    {
+        rolledDice.Add(diceValue);
+        if (rolledDice.Count == 2)
+        {
+            RollDice();
+        }
+    }
+
+    // PRESS BUTTON FROM HUMAN - OR AUTO FROM AI
+    void RollDice()
+    {
+        bool allowedToMove = true;
+        hasRolledDice = true;
 
         // RESET LAST ROLL
-        rolledDice = new int[2];
+        // rolledDice = new int[2];
 
-        // ANY ROLL DICE AND STORE THEM
-        rolledDice[0] = Random.Range(1, 7);
-        rolledDice[1] = Random.Range(1, 7);
+        // // ANY ROLL DICE AND STORE THEM
+        // rolledDice[0] = Random.Range(1, 7);
+        // rolledDice[1] = Random.Range(1, 7);
         Debug.Log("Rolled dice are: " + rolledDice[0] + " & " + rolledDice[1]);
 
         //DEBUG
-        if (alwaysDoubleRoll)
-        {
-            rolledDice[0] = 1;
-            rolledDice[1] = 1;
-        }
-        if (forceDiceRolls)
-        {
-            rolledDice[0] = dice1;
-            rolledDice[1] = dice2;
-        }
+        // if (alwaysDoubleRoll)
+        // {
+        //     rolledDice[0] = 1;
+        //     rolledDice[1] = 1;
+        // }
+        // if (forceDiceRolls)
+        // {
+        //     rolledDice[0] = dice1;
+        //     rolledDice[1] = dice2;
+        // }
 
         // CHECK FOR DOUBLE
         rolledADouble = rolledDice[0] == rolledDice[1];
@@ -213,19 +249,11 @@ public class GameManager : MonoBehaviour
             OnUpdateMessage.Invoke(playerList[currentPlayer].name + " <color=red>can't move</color> - <b>switching player</b>!");
             StartCoroutine(DelayBetweenSwicthPlayer());
         }
-
-
-        // SHOW OR HIDE UI
-        if (playerList[currentPlayer].playerType == Player.PlayerType.HUMAN)
-        {
-            bool jail1 = playerList[currentPlayer].HasChanceJailFreeCard;
-            bool jail2 = playerList[currentPlayer].HasCommunityJailFreeCard;
-            OnShowHumanPanel.Invoke(true, false, false, jail1, jail2);
-        }
     }
 
     IEnumerator DelayBeforeMove(int rolledDice)
     {
+        CameraSwitcher.instance.SwitchToPlayer(playerList[currentPlayer].MyToken.transform);
         yield return new WaitForSeconds(secondsBetweenTurns);
         // IF ALLOWED TO MOVE THEN MOVE
         gameBoard.MovePlayerToken(rolledDice, playerList[currentPlayer]);
@@ -240,6 +268,7 @@ public class GameManager : MonoBehaviour
 
     public void SwitchPlayer()
     {
+        CameraSwitcher.instance.SwitchToTopDown();
         currentPlayer++;
         //RESET DICE HAS ROLLED
         hasRolledDice = false;
@@ -259,7 +288,9 @@ public class GameManager : MonoBehaviour
         // IF AI PLAYER
         if (playerList[currentPlayer].playerType == Player.PlayerType.AI)
         {
-            RollDice();
+            // RollDice();
+            RollPhysicalDice();
+
             OnShowHumanPanel.Invoke(false, false, false, false, false);
         }
         else // IF HUMAN - SHOW UI
@@ -270,7 +301,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public int[] LastRolledDice => rolledDice;
+    public List<int> LastRolledDice => rolledDice;
 
     public void AddTaxToPool(int amount)
     {
@@ -322,7 +353,7 @@ public class GameManager : MonoBehaviour
 
     public void Continue()
     {
-        if(playerList.Count>1)
+        if (playerList.Count > 1)
         {
             Invoke("ContinueGame", SecondsBetweenTurns);
         }
@@ -334,7 +365,8 @@ public class GameManager : MonoBehaviour
         if (RolledADouble)
         {
             // ROLL THE DICE AGAIN
-            RollDice();
+            // RollDice();
+            RollPhysicalDice();
         }
         else
         {
@@ -356,5 +388,18 @@ public class GameManager : MonoBehaviour
     public void UseJail2Card()
     {
         playerList[currentPlayer].UseCommunityJailFreeCard();
+    }
+
+    bool isHumanPanelVisible = false;
+    [Header("Toggle Human Panel")]
+    [SerializeField] TMP_Text buttonText;
+
+    public void ToggleHumanPanel()
+    {
+        isHumanPanelVisible = !isHumanPanelVisible;
+        OnShowHumanPanel.Invoke(isHumanPanelVisible, isHumanPanelVisible, false, false, false);
+        buttonText.text = isHumanPanelVisible ? "HIDE PANEL" : "SHOW PANEL";
+        buttonText.color = isHumanPanelVisible ? Color.red : Color.green;
+        // Debug.Log(buttonText); // Assuming you want to log the text, replace this with actual UI text update if needed
     }
 }

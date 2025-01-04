@@ -19,7 +19,7 @@ public class Player
     int money;
     MonopolyNode currentNode;
     bool isInJail;
-    int numTurnsInJail;
+    int numTurnsInJail = 0;
     [SerializeField] GameObject myToken; // CHARACTER TOKEN ON BOARD
     [SerializeField] List<MonopolyNode> myMonopolyNodes = new List<MonopolyNode>();
     public List<MonopolyNode> GetMonopolyNodes => myMonopolyNodes;
@@ -36,12 +36,12 @@ public class Player
     int aiMoneySavity = 500;
 
     // AI STATES
-    public enum AIStates
+    public enum AiStates
     {
         IDLE,
-        TRADING,
+        TRADING
     }
-    public AIStates aiState;
+    public AiStates aiState;
 
     // RETURN SOME INFOS
     public bool IsInJail => isInJail;
@@ -291,12 +291,12 @@ public class Player
                 }
             }
         }
-        if(playerType == PlayerType.AI)
+        if (playerType == PlayerType.AI)
         {
             //GO BANKRUPT IF REACH THIS POINT
             Bankrupt();
         }
-        
+
 
     }
 
@@ -312,12 +312,12 @@ public class Player
         {
             myMonopolyNodes[i].ResetNode();
         }
-        if(hasChanceJailFreeCard)
+        if (hasChanceJailFreeCard)
         {
             SpellsChest.instance.AddBackJailFreeCard();
         }
 
-        if(hasCommunityJailFreeCard)
+        if (hasCommunityJailFreeCard)
         {
             PotionField.instance.AddBackJailFreeCard();
         }
@@ -461,8 +461,8 @@ public class Player
         SortPropertiesByPrice();
     }
 
-    //-------------------------------REMOVE AND ADD NODES-------------------------------------------------
-    public void ChangeState(AIStates state)
+    //-------------------------------STATE MACHINE-------------------------------------------------AI
+    public void ChangeState(AiStates state)
     {
         if (playerType == PlayerType.HUMAN)
         {
@@ -472,14 +472,14 @@ public class Player
         aiState = state;
         switch (aiState)
         {
-            case AIStates.IDLE:
+            case AiStates.IDLE:
                 {
                     // CONTINUE THE GAME
                     // ContinueGame();
                     GameManager.instance.Continue();
                 }
                 break;
-            case AIStates.TRADING:
+            case AiStates.TRADING:
                 {
                     // HOLD THE GAME UNTIL IT FINISHES TRADING
                     TradingSystem.instance.FindMissingProperty(this);
@@ -500,7 +500,7 @@ public class Player
 
     public void UseCommunityJailFreeCard() // Jail2
     {
-        if(!IsInJail)
+        if (!IsInJail)
         {
             return;
         }
@@ -508,11 +508,11 @@ public class Player
         hasCommunityJailFreeCard = false;
         SpellsChest.instance.AddBackJailFreeCard();
         OnUpdateMessage.Invoke(name + " used a <color=green>Jail Free Card</color>");
-    } 
+    }
 
     public void UseChanceJailFreeCard() // Jail 1
     {
-        if(!IsInJail)
+        if (!IsInJail)
         {
             return;
         }
@@ -520,6 +520,6 @@ public class Player
         hasChanceJailFreeCard = false;
         PotionField.instance.AddBackJailFreeCard();
         OnUpdateMessage.Invoke(name + " used a <color=green>Jail Free Card</color>");
-    } 
+    }
 }
 

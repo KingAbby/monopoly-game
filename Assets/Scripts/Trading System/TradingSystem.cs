@@ -23,7 +23,6 @@ public class TradingSystem : MonoBehaviour
     [SerializeField] TMP_Text leftOfferMoney;
     [SerializeField] Slider leftMoneySlider;
     List<GameObject> leftCardPrefabList = new List<GameObject>();
-
     Player leftPlayerReference;
 
     [Header("MIDDLE PANEL")]
@@ -94,7 +93,7 @@ public class TradingSystem : MonoBehaviour
                 requestedNode = list.Find(n => n.Owner != currentPlayer && n.Owner != null);
                 if (requestedNode != null)
                 {
-                    // MAKE TRADE OFFER
+                    // MAKE TRADE OFFER TO THE OWNER OF THE NODE
                     MakeTradeDecision(currentPlayer, requestedNode.Owner, requestedNode);
                     break;
                 }
@@ -105,7 +104,7 @@ public class TradingSystem : MonoBehaviour
                 if (hasMostOfSet >= 2)
                 {
                     requestedNode = list.Find(n => n.Owner != currentPlayer && n.Owner != null);
-                    // MAKE TRADE OFFER
+                    // MAKE TRADE OFFER TO THE OWNER OF THE NODE
                     MakeTradeDecision(currentPlayer, requestedNode.Owner, requestedNode);
                     break;
                 }
@@ -115,7 +114,7 @@ public class TradingSystem : MonoBehaviour
         // CONTINUE IF NOTHING WAS FOUND
         if (requestedNode == null)
         {
-            currentPlayer.ChangeState(Player.AIStates.IDLE);
+            currentPlayer.ChangeState(Player.AiStates.IDLE);
         }
     }
 
@@ -126,7 +125,6 @@ public class TradingSystem : MonoBehaviour
         if (currentPlayer.ReadMoney >= CalculateValueOfNode(requestedNode))
         {
             // TRADE WITH MONEY ONLY
-
             // MAKE TRADE OFFER
             MakeTradeOffer(currentPlayer, nodeOwner, requestedNode, null, CalculateValueOfNode(requestedNode), 0);
             return;
@@ -167,7 +165,7 @@ public class TradingSystem : MonoBehaviour
         // NO VALID TRADE FOUND THEN EXIT
         if (!foundDecision)
         {
-            currentPlayer.ChangeState(Player.AIStates.IDLE);
+            currentPlayer.ChangeState(Player.AiStates.IDLE);
         }
     }
 
@@ -275,7 +273,7 @@ public class TradingSystem : MonoBehaviour
         CloseTradePanel();
         if (currentPlayer.playerType == Player.PlayerType.AI)
         {
-            currentPlayer.ChangeState(Player.AIStates.IDLE);
+            currentPlayer.ChangeState(Player.AiStates.IDLE);
         }
     }
 
@@ -488,18 +486,18 @@ public class TradingSystem : MonoBehaviour
 
         // SHOW PANEL CONTENT
         tradeOfferPanel.SetActive(true);
-        leftMessageText.text = currentPlayer.name + " Offers: ";
-        rightMessageText.text = "For " + nodeOwner.name + "'s: ";
+        leftMessageText.text = currentPlayer.name + " offers:";
+        rightMessageText.text = "For " + nodeOwner.name + "'s:";
         leftMoneyText.text = "+G " + offeredMoney;
         rightMoneyText.text = "+G " + requestedMoney;
-
         leftCard.SetActive(offeredNode != null ? true : false);
         rightCard.SetActive(requestedNode != null ? true : false);
+        leftPropertyNameText.text = (offeredNode != null) ? offeredNode.name : "No Property Offered";
+        rightPropertyNameText.text = (requestedNode != null) ? requestedNode.name : "No Property Requested";
 
         if (leftCard.activeInHierarchy)
         {
             leftColorField.color = (offeredNode.propertyColorField != null) ? offeredNode.propertyColorField.color : Color.black;
-            leftPropertyNameText.text = offeredNode.name;
             switch (offeredNode.monopolyNodeType)
             {
                 case MonopolyNodeType.Property:
@@ -516,11 +514,9 @@ public class TradingSystem : MonoBehaviour
                     break;
             }
         }
-
         if (rightCard.activeInHierarchy)
         {
             rightColorField.color = (requestedNode.propertyColorField != null) ? requestedNode.propertyColorField.color : Color.black;
-            rightPropertyNameText.text = requestedNode.name;
             switch (requestedNode.monopolyNodeType)
             {
                 case MonopolyNodeType.Property:
@@ -542,12 +538,13 @@ public class TradingSystem : MonoBehaviour
     public void AcceptOffer()
     {
         Trade(currentPlayer, nodeOwner, requestedNode, offeredNode, offeredMoney, requestedMoney);
+        currentPlayer.ChangeState(Player.AiStates.IDLE);
         ResetOffer();
     }
 
     public void RejectOffer()
     {
-        currentPlayer.ChangeState(Player.AIStates.IDLE);
+        currentPlayer.ChangeState(Player.AiStates.IDLE);
         ResetOffer();
     }
 
